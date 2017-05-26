@@ -96,73 +96,16 @@
             box-shadow: 0px 0px 20px  black ;
         }
         .sub-content {
-            background-color:black;
+           float: right;
         }
 
     </style>
 </head>
 <body>
-    <?php  include "component/navbar.php"; ?>
-    <div>
-        	<div class="content">
-	            <div class="container-fluid">
-	                <div class="row">
-	                    <div class="col-md-12">
-	                        <div class="card card-plain">
-	                            <div class="card-header" data-background-color="purple">
-	                                <h1 class="title" align="center">JOBS LIST</h1>
-	                            </div>
-
-	                    	</div>
-	                	</div>
-	            	</div>
-	        	</div>
-	    	</div>
-    </div>
-    <div>
-        <div class="col-md-2">
-            <?php include "component/sideMenu.php"; ?>
-        </div>
-        <div class="col-md-10">
-            <?php include "component/tabList.php";?>
-        </div>
-        
-
-        
-       
-    </div>
+<?php include "component/navbar.php"; ?>
+<?php include "component/myJobList.inc.php"; ?>
     
 </body>
-
-	<script>
-		function Redirect(id)
-		{
-    		window.location="projectDetail.php?proID="+id;
-		}
-	</script>
-  <script>
-        function myFunction() {
-        var input , myText , myCard ,detail, text, i , j;
-		input = document.getElementById("search");
-		myText = input.value.toUpperCase();
-
-        myHeadCard = document.getElementById("myCard");
-
-        myCard = myHeadCard.getElementsByTagName("div");
-		
-        for(i = 0 ; i < myCard.length; i+=7){
-			detail = myCard[i].getElementsByTagName("div");
-			text = detail[3].getElementsByTagName("h4");
-
-			if(text[0].innerHTML.toUpperCase().indexOf(myText) > -1){
-				myCard[i].style.display="";
-			}
-			else{
-				myCard[i].style.display = "none";
-			}
-		}
-		}
-    </script>
 <!--   Core JS Files   -->
 <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -182,35 +125,5 @@
 
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
-<script>
-    $(document).ready(function(){
 
-        $("li").click(function(){
-            $("li").removeClass("active");
-            $(this).addClass("active");
-        });
-
-        $("div.col-md-3 > div.card").mouseover(function(){
-            $(this).addClass("show-box");
-        });
-
-        $("div.card").mouseleave(function(){
-            $(this).removeClass("show-box");
-        });
-    });
-    
-</script>
-<script>
-    var header_height;
-    var fixed_section;
-    var floating = false;
-
-    $().ready(function(){
-        suggestions_distance = $("#suggestions").offset();
-        pay_height = $('.fixed-section').outerHeight();
-        $('.modal').appendTo("body");
-        $(window).on('scroll', md.checkScrollForTransparentNavbar);
-        demo.initDocumentationCharts();
-    });
-</script>
 </html>

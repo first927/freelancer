@@ -92,21 +92,37 @@
     </style>
 </head>
 <body>
-	        <div class="content">
-	            <div class="container-fluid">
-	                <div class="row">
-	                    <div class="col-md-12">
-	                        <div class="card card-plain">
-	                            <div class="card-header" data-background-color="purple">
-	                                <h4 class="title">Material Design Icons</h4>
-	                                <p class="category">Handcrafted by our friends from <a target="_blank" href="https://design.google.com/icons/">Google</a></p>
-	                            </div>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button id="menu-toggle" type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2"></span>
+                <span class="icon-bar bar3"></span>
+            </button>
+            <a >
 
-	                    	</div>
-	                	</div>
-	            	</div>
-	        	</div>
-	    	</div>
+                <div class="brand">
+                    <a class="navbar-brand" href="index.php"><i class="material-icons" >content_copy</i>Library Lab</a>
+                </div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <ul  class="nav navbar-nav navbar-right">
+
+                    <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
+                    <a class="navbar-brand" href="#"><i class="material-icons" >store</i>MyJob</a>
+                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
+                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
+
+            </ul><!--navbar-right-->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 </body>
 	<script>
 		function Redirect(id)
