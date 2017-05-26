@@ -5,7 +5,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
+    
     <title>Project Master 007</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -20,7 +20,7 @@
     <link href="documentation/css/demo-documentation.css" rel="stylesheet" />
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
+    
     <style>
 
         body{
@@ -88,6 +88,7 @@
         text-align: center;
         font-size: 30px;
     }
+    
 
 </style>
 </head>
@@ -103,49 +104,93 @@
     <div class="col-md-12" >
         <div class="card" >
             <div class="card-header " data-background-color="purple">
-                <h2 class="title">JOB NAME <?php echo $pID; ?></h2>
+                <h2 class="title" >JOB NAME <?php echo $pID; ?></h2>
             </div>
             <div class="card-content"  >
-                <h4 class="title">Details</h4>
+                <h4 class="title" >Details</h4>
 
+                <p class="category">
+                    [รีวิว] ชีวิตฟรีดอม ก็ทำเงินได้ !<br>
+                    ----------------------------------------------------<br>
+                    รับฟัง และเปิดใจกับโลกของ “คนไร้บ้าน” ในงาน “Human of Street” วันเสาร์ที่ 3 มิถุนายน 2560 เวลา 14.30 - 17.30 น. ณ พิพิธบางลำพู 
+                    ติดตามข้อมูลเพิ่มเติม <br>
+                    การปฎิวัติวงการเกมมือถือ 2017, Lineage2 Revolution<br>
+                    กราฟิกคุณภาพสูงที่ควรคู่กับโอเพ่นฟิลด์ขนาดใหญ่<br>
+                    ลงทะเบียนล่วงหน้าตอนนี้เลย
+                    คลิปนี้ดีมาก<br>
+
+                    เหมาะอย่างยิ่งกับสถานการณ์ปัจจุบัน<br>
+
+                    .<br>
+
+                    ในยุคที่ผู้คนยืนอยู่บนความก้ำกึ่งระหว่าง "ผู้สร้าง" กับ "ผู้เสพย์"<br>
+
+                    ขณะที่บางคน 'เสพย์' มาแล้วพยายาม 'สร้าง' ต่อ<br>
+
+                    อีกหลายคน 'เสพย์' มาแล้ว 'ทำลาย'
+                    <br>
+                    .
+                    <br>
+                    ไม่ว่าคุณจะทำอะไร ... ยังไงก็มีคนด่า<br>
+
+                    ยิ่งคุณ 'เชื่อมั่น'<br>
+
+                    คุณยิ่งต้อง 'ช่างแม่ง'<br>
+
+                    .<br>
+                    <br>
+                    .<br>
+                    <br>
+                    - ผู้กองเบนซ์ -<br>
+                </p>
+                <br>
+                <p class="category">Non voluptate deserunt commodo ad magna dolor sit reprehenderit ex veniam anim nisi pariatur dolore elit consequat. Aute in aliquip duis laboris do irure culpa eu fugiat nisi non ea magna amet duis. Veniam duis consequat commodo ex enim nostrud laborum exercitation magna ex. Proident duis cillum aliquip qui enim velit magna aliquip deserunt in et exercitation ut. Ullamco sit commodo ut consequat et in ex id cupidatat magna nisi. Aliqua et amet consequat eiusmod ut qui laboris adipisicing ullamco proident laborum laboris. Ut aliquip incididunt dolore ad elit eu minim id sed esse anim sit ad eu. Aliquip sit minim dolor officia proident sunt dolor elit do mollit consectetur aliqua officia. Culpa ea voluptate ex fugiat laborum commodo adipisicing id duis eu aliqua id nulla.
+                </p>
+                <br>
+                <p class="category">Ut ad enim amet aliquip in reprehenderit est est ex. Fugiat sit proident fugiat enim ut occaecat dolor consectetur. Laborum dolore anim reprehenderit reprehenderit consequat ea labore excepteur incididunt. Sit aliquip tempor magna in nulla nulla incididunt officia excepteur do ullamco nisi amet commodo do. Nostrud dolor in sunt proident aliquip ullamco dolor ad dolor cupidatat laborum et deserunt. Duis ad deserunt commodo et duis cupidatat mollit aliqua incididunt reprehenderit sit occaecat enim aute sint reprehenderit minim amet. Occaecat officia consectetur qui voluptate eu nulla cupidatat occaecat anim occaecat reprehenderit cillum dolore consequat tempor. Dolor id laborum elit ut cupidatat ut ea sint do magna id esse dolore veniam sint. Deserunt sunt sunt elit sint cupidatat deserunt magna culpa in.
+                </p> 
+                <br>
+
+                <p class="category">Consectetur aute consectetur fugiat ad esse nulla mollit esse exercitation nostrud consequat cillum aliquip reprehenderit anim magna. Mollit adipisicing veniam ullamco duis cillum fugiat dolor et sunt et duis esse mollit voluptate consequat. Dolore qui cillum tempor in elit est incididunt in aute.</p>
+                <br>
+
+                <h4 class="title" >Requirements</h4>
                 <p class="category">Sit adipisicing excepteur aliquip velit sit velit ut laboris dolor sint sit. Lorem ipsum ea labore enim sit cupidatat consectetur culpa sint non tempor esse consequat officia ullamco labore irure. Est qui esse culpa dolor sit voluptate quis ut veniam excepteur cupidatat. Nulla laboris labore ad pariatur ullamco anim et laborum dolore incididunt mollit ullamco. Do dolore cillum in non id quis est sed voluptate adipisicing sint ullamco aute magna. Lorem ipsum magna pariatur qui mollit in anim ad pariatur anim ut enim ut eiusmod dolore in. Lorem ipsum sunt exercitation tempor ut minim dolore mollit qui id consequat eiusmod eiusmod adipisicing id. Enim nostrud excepteur elit dolor ea sit labore duis dolore consectetur ut ut. Lorem ipsum esse qui occaecat et ea sint tempor non aliquip ad quis adipisicing labore sunt consectetur. Ut commodo amet exercitation ullamco minim proident ut nostrud magna nostrud reprehenderit do ea tempor. Commodo dolor dolor aliqua elit irure quis dolor cupidatat. Lorem ipsum ad commodo in consectetur laboris fugiat est aute sint.</p>
                 <br>
-                <p class="category">Qui in id id in mollit dolor dolore in anim ea minim consectetur culpa mollit consequat. Mollit enim ut veniam veniam ut minim sunt reprehenderit adipisicing cillum deserunt qui. Enim in veniam aute elit et dolor voluptate eu anim cupidatat et sit sint. Lorem ipsum dolor irure id in fugiat amet laborum non pariatur tempor consectetur. Ex ullamco in do sunt eu cupidatat velit in velit enim laborum officia sit in ullamco fugiat fugiat. Lorem ipsum excepteur tempor ullamco laborum commodo amet duis non mollit dolor in enim. Nostrud elit quis ullamco pariatur quis amet excepteur laborum tempor ullamco anim ullamco ex. Culpa cupidatat labore ex mollit in aliqua sit tempor mollit. Aute ut occaecat excepteur excepteur culpa in eu cupidatat dolor voluptate deserunt culpa cupidatat in est adipisicing magna. Nulla ex non amet labore do consectetur sit eiusmod velit cupidatat sint occaecat ad laboris dolor dolore cupidatat ut. Lorem ipsum ut qui nulla dolor nisi fugiat incididunt eu adipisicing do.</p>
-                <br>
-                <p class="category">Consectetur in ut ex voluptate ullamco irure incididunt nulla proident. Lorem ipsum duis dolor excepteur ut in mollit non ullamco consectetur consectetur fugiat non voluptate magna culpa minim id dolor. Velit officia commodo esse ut excepteur duis ullamco pariatur enim reprehenderit veniam exercitation laboris in excepteur velit excepteur. Amet commodo et aliqua fugiat officia anim tempor officia laboris. Deserunt amet id reprehenderit id tempor labore fugiat elit pariatur sed aliquip. Id pariatur dolor in mollit officia reprehenderit do amet dolor dolore ut. Ut ut adipisicing incididunt eiusmod ut duis ut labore mollit non. Amet in fugiat officia ullamco dolore quis commodo culpa velit consequat nisi. Aliquip officia incididunt aliqua consequat enim elit magna sed laboris dolore aute laboris culpa excepteur culpa eiusmod exercitation aliqua. Adipisicing dolor irure duis commodo aliqua ut sunt fugiat deserunt eu laborum nostrud. Exercitation voluptate reprehenderit consectetur est magna fugiat ut minim velit tempor ut proident irure id. Culpa et eu culpa nisi ullamco qui do duis dolore amet cupidatat ad dolor cupidatat. Lorem ipsum esse occaecat anim irure veniam magna exercitation sunt elit deserunt. Elit qui laborum ea duis in aute in nisi veniam sint ut aliquip nisi eiusmod enim voluptate. Laboris adipisicing ea minim pariatur incididunt anim ut et et cupidatat ut amet cillum veniam. Lorem ipsum est duis elit exercitation excepteur cillum mollit nulla ad aute est labore. Tempor do labore in in dolore ut amet in dolore fugiat in exercitation laborum. Commodo cillum eiusmod occaecat ex ut est enim eu laboris proident. Est pariatur laborum consectetur deserunt duis eiusmod dolor dolor culpa ut. Ut minim velit nulla aliquip proident ad occaecat ea est in exercitation laboris consectetur veniam nisi officia tempor.</p>
-                <br>
-                <p class="category">Laboris amet et in amet excepteur commodo deserunt id do eiusmod. Lorem ipsum deserunt in quis dolor officia deserunt sit consequat enim aute culpa nisi in adipisicing duis minim amet. Do nostrud ut minim et irure qui labore velit fugiat. Lorem ipsum non aliquip ad velit elit enim consequat culpa irure aute ea non minim ut ullamco. Aute laborum dolor dolor officia eiusmod velit sint proident commodo consequat aute esse dolore in cupidatat exercitation. Lorem ipsum est amet anim aute adipisicing reprehenderit dolor in laborum nulla ad proident proident elit. Est elit mollit qui dolore ut occaecat pariatur enim sint culpa incididunt mollit aliquip amet ullamco nostrud. Irure in aliqua esse eu velit aliqua exercitation aliquip qui deserunt mollit amet velit est id. Sit excepteur irure aliquip dolor ut elit quis nulla irure officia esse mollit velit ut excepteur exercitation. Est commodo consequat sint exercitation exercitation duis eu ut consequat consectetur dolor nulla nostrud ex velit ad dolore. Minim velit reprehenderit ea tempor laboris ullamco sint dolor amet. Lorem ipsum elit excepteur aliquip laborum in occaecat mollit duis velit fugiat laborum reprehenderit deserunt tempor velit mollit veniam ad. Laborum consequat proident laboris in ea ullamco elit veniam tempor dolor ut eu. Lorem ipsum consequat qui ad ut exercitation sed in velit eu mollit incididunt nostrud voluptate cillum. Mollit tempor commodo laboris dolore ad mollit adipisicing duis cupidatat sit cillum. Dolor eiusmod tempor commodo officia qui cupidatat officia ut incididunt in pariatur labore labore ut. In proident ut sed cillum do aute commodo commodo cupidatat mollit id consequat eiusmod laborum sed duis. Do laboris est excepteur sunt fugiat minim id exercitation incididunt voluptate voluptate culpa elit anim tempor adipisicing ullamco. Amet tempor cillum proident laboris commodo enim mollit do amet consequat aute dolor id officia minim tempor elit do. In eu in duis adipisicing non exercitation exercitation reprehenderit mollit nostrud velit cupidatat tempor labore.</p>
-                <br>
 
-                <h4 class="title">Requirements</h4>
-                <p class="category">Sit adipisicing excepteur aliquip velit sit velit ut laboris dolor sint sit. Lorem ipsum ea labore enim sit cupidatat consectetur culpa sint non tempor esse consequat officia ullamco labore irure. Est qui esse culpa dolor sit voluptate quis ut veniam excepteur cupidatat. Nulla laboris labore ad pariatur ullamco anim et laborum dolore incididunt mollit ullamco. Do dolore cillum in non id quis est sed voluptate adipisicing sint ullamco aute magna. Lorem ipsum magna pariatur qui mollit in anim ad pariatur anim ut enim ut eiusmod dolore in. Lorem ipsum sunt exercitation tempor ut minim dolore mollit qui id consequat eiusmod eiusmod adipisicing id. Enim nostrud excepteur elit dolor ea sit labore duis dolore consectetur ut ut. Lorem ipsum esse qui occaecat et ea sint tempor non aliquip ad quis adipisicing labore sunt consectetur. Ut commodo amet exercitation ullamco minim proident ut nostrud magna nostrud reprehenderit do ea tempor. Commodo dolor dolor aliqua elit irure quis dolor cupidatat. Lorem ipsum ad commodo in consectetur laboris fugiat est aute sint.</p>
-                <br>
+                <h4 class="category" style="float: right;"><b><i>- OOPS PRODUCTION.</i></b></h4>
 
-                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#positions">Register to this job</button>
+                <button type="button" id="toggleButton" class="btn btn-primary" data-toggle="collapse" data-target="#positions">Register to this job</button>
 
                 <div id="positions" class="collapse">
-                    <h4 class="title">Our positions</h4>
-                    <button type="button" class="btn btn-primary active">Frot-End Programmer (Javascript, HTML, CSS)</button>
-                    <button type="button" class="btn btn-primary disabled">Back-End Programmer (PHP, blah blah blah)</button>
-                    <button type="button" class="btn btn-primary active">Frot-End Programmer</button>
-                    <button type="button" class="btn btn-primary disabled">Back-End Programmer (PHP, blah blah blah)</button>
-                    <button type="button" class="btn btn-primary active">Frot-End Programmer</button>
-                    <button type="button" class="btn btn-primary disabled">Back-End Programmer (PHP, blah blah blah)</button>
-                    <button type="button" class="btn btn-primary active">Frot-End Programmer</button>
-                    <button type="button" class="btn btn-primary disabled">Back-End Programmer</button>
-                    <button type="button" class="btn btn-primary active">Frot-End Programmer (Javascript, HTML, CSS)</button>
-                    <button type="button" class="btn btn-primary disabled">Back-End Programmer (PHP, blah blah blah)</button>
-                </div>
-                
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <i class="material-icons">access_time</i> updated 4 minutes ago
-                    <p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
-                </div>
+                    <h4 class="title">Our positions 
+                        <div class="btn-group btn-group-sm">
+                          <button type="button" class="btn btn-success selectAvailable">Available</button>
+                          <button type="button" class="btn btn-dafault selectUnavailable">Unavailable</button>
+                          <button type="button" class="btn btn-warning selectAll">All</button>
+                      </div>
+                  </h4>
+
+                  <button type="button" id="job1" class="btn btn-success active buttonAvailable">Front-End Programmer (Javascript, HTML, CSS)</button>
+                  <button type="button " id="job2" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>
+                  <button type="button" id="job3" class="btn btn-success active buttonAvailable">Front-End Programmer</button>
+                  <button type="button" id="job4" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>
+                  <button type="button" id="job5" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>
+                  <button type="button" id="job6" class="btn btn-default disabled buttonUnavailable">Back-End Programmer</button>
+                  <button type="button" id="job7" class="btn btn-success active buttonAvailable">Front-End Programmer (Javascript, HTML, CSS)</button>
+                  <button type="button" id="job8" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>    
+              </div>
+
+
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+                <i class="material-icons">access_time</i> updated 4 minutes ago
+                <p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
             </div>
         </div>
     </div>
+</div>
 </body>
 
 <!--   Core JS Files   -->
@@ -179,6 +224,34 @@
         $('.modal').appendTo("body");
         $(window).on('scroll', md.checkScrollForTransparentNavbar);
         demo.initDocumentationCharts();
+
+        $(".buttonAvailable").click(function (e) {
+           // $(this).text("lerpso");
+           e.preventDefault();
+            // alert($(this).attr("id"));
+            confirm("Do you wanna register to "+$(this).attr("id")+" ?");
+
+        });
+
+        $(".selectAvailable").click(function (e) {
+            e.preventDefault();
+            $(".buttonAvailable").show(499);
+            $(".buttonUnavailable").hide(499);
+        });
+        $(".selectUnavailable").click(function (e) {
+            e.preventDefault();
+            $(".buttonAvailable").hide(499);
+            $(".buttonUnavailable").show(499);
+        });
+        $(".selectAll").click(function (e) {
+            e.preventDefault();
+            $(".buttonAvailable").show(499);
+            $(".buttonUnavailable").show(499);
+        });
     });
+
+
+
+
 </script>
 </html>
