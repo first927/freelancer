@@ -98,9 +98,7 @@
         .sub-content {
            float: right;
         }
-        .card-status{
-            float: right;
-        }
+   
 
     </style>
 </head>

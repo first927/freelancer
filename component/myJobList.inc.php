@@ -6,8 +6,10 @@
     <div class="card">
         <div class="card-header" data-background-color="purple">
             <h4 class="title"><b>JobName</b></h4>
-            <p class="category">Here is a subtitle for this table</p>
+            <p class="category ">Here is a subtitle for this table</p>
+            <h2  style="float:right; color: black" ><b>Position: Programmer</b></h2>
 	    </div>
+        
 
         
         <div class="card-content">

@@ -180,8 +180,8 @@
 
 <script>
 $(document).ready(function(){
-    $("ul.side-menu li").click(function() {
-        $("ul.side-menu li").removeClass("active");
+    $("div.sidebar-wrapper  li").click(function() {
+        $("div.sidebar-wrapper li").removeClass("active");
         $(this).addClass("active");
     });
 

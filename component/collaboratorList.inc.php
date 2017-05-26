@@ -12,7 +12,7 @@
         </div>
         <div class="card-footer">
             <div class="stats">
-                <i class="material-icons text-danger">warning</i> <a href="#pablo">Get More Space...</a>
+                <i class="material-icons text-info">info</i> <a href="#pablo">Get More Profile Detail</a>
             </div>
         </div>
     </div>

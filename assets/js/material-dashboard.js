@@ -61,18 +61,7 @@ $(document).ready(function() {
     });
 
     //add shadow whoen mouseover card
-    $("li").click(function() {
-        $("li").removeClass("active");
-        $(this).addClass("active");
-    });
 
-    $("div.col-md-3 > div.card").mouseover(function() {
-        $(this).addClass("show-box");
-    });
-
-    $("div.card").mouseleave(function() {
-        $(this).removeClass("show-box");
-    });
 
 });
 
