@@ -12,7 +12,7 @@
 			</div>
 
 	    	<div class="sidebar-wrapper">
-	            <ul class="nav">
+	            <ul class="nav side-menu">
 	                <li class="active">
 	                    <a >
 	                        <i class="material-icons">dashboard</i>

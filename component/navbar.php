@@ -33,7 +33,58 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-              <!-- Modal -->
+              
+<div class="myFade">
+
+</div>
+
+
+<div class="page-header header-filter" style="background-image: url('assets/img/headBar.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+}else{ ?>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button id="menu-toggle" type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2"></span>
+                <span class="icon-bar bar3"></span>
+            </button>
+            <a >
+
+                <div class="brand">
+                    <a class="navbar-brand" href="index.php"><i class="material-icons" >content_copy</i>Library Lab</a>
+                </div>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <ul  class="nav navbar-nav navbar-right">
+
+                    <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
+                    <a class="navbar-brand" href="http://localhost/freelancer/myJob.php"><i class="material-icons" >store</i>MyJob</a>
+                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
+                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
+
+            </ul><!--navbar-right-->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<?php
+}
+?>
+<!-- Modal -->
                     <div class="modal fade" id="modalRegister" role="dialog" >
                         <!-- Modal content-->
                             <div class="modal-dialog" style="width: 450px">
@@ -120,53 +171,3 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                                 </div>
                             </div>
                         </div>
-<div class="myFade">
-
-</div>
-
-
-<div class="page-header header-filter" style="background-image: url('assets/img/headBar.jpg');">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-            </div>
-        </div>
-    </div>
-</div>
-<?php
-}else{ ?>
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button id="menu-toggle" type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar bar1"></span>
-                <span class="icon-bar bar2"></span>
-                <span class="icon-bar bar3"></span>
-            </button>
-            <a >
-
-                <div class="brand">
-                    <a class="navbar-brand" href="index.php"><i class="material-icons" >content_copy</i>Library Lab</a>
-                </div>
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-            <ul  class="nav navbar-nav navbar-right">
-
-                    <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
-                    <a class="navbar-brand" href="http://localhost/freelancer/myJob.php"><i class="material-icons" >store</i>MyJob</a>
-                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
-                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
-
-            </ul><!--navbar-right-->
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-
-<?php
-}
-?>

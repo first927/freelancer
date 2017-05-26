@@ -21,6 +21,7 @@
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
+
     <style>
 
         body{
@@ -95,9 +96,7 @@
         .show-box{
             box-shadow: 0px 0px 20px  black ;
         }
-        .sub-content {
-            background-color:black;
-        }
+        
 
     </style>
 </head>
@@ -126,10 +125,6 @@
         <div class="col-md-10">
             <?php include "component/tabList.php";?>
         </div>
-        
-
-        
-       
     </div>
     
 </body>
@@ -182,23 +177,22 @@
 
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
+
 <script>
-    $(document).ready(function(){
-
-        $("li").click(function(){
-            $("li").removeClass("active");
-            $(this).addClass("active");
-        });
-
-        $("div.col-md-3 > div.card").mouseover(function(){
-            $(this).addClass("show-box");
-        });
-
-        $("div.card").mouseleave(function(){
-            $(this).removeClass("show-box");
-        });
+$(document).ready(function(){
+    $("ul.side-menu li").click(function() {
+        $("ul.side-menu li").removeClass("active");
+        $(this).addClass("active");
     });
-    
+
+    $("div.col-md-3 > div.card").mouseover(function() {
+        $(this).addClass("show-box");
+    });
+
+    $("div.card").mouseleave(function() {
+        $(this).removeClass("show-box");
+    });
+});
 </script>
 <script>
     var header_height;
