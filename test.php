@@ -88,23 +88,18 @@
             text-align: center;
             font-size: 30px;
         }
-        div.sidebar{
-            position:relative ;
-            display : block ; 
-        }
 
     </style>
 </head>
 <body>
-    <?php  include "component/navbar.php"; ?>
-    <div>
-        	<div class="content">
+	        <div class="content">
 	            <div class="container-fluid">
 	                <div class="row">
 	                    <div class="col-md-12">
 	                        <div class="card card-plain">
 	                            <div class="card-header" data-background-color="purple">
-	                                <h1 class="title" align="center">JOBS LIST</h1>
+	                                <h4 class="title">Material Design Icons</h4>
+	                                <p class="category">Handcrafted by our friends from <a target="_blank" href="https://design.google.com/icons/">Google</a></p>
 	                            </div>
 
 	                    	</div>
@@ -112,20 +107,6 @@
 	            	</div>
 	        	</div>
 	    	</div>
-    </div>
-    <div>
-        <div class="col-md-3">
-            <?php include "component/sideMenu.php"; ?>
-        </div>
-        <div class="col-md-9">
-            <?php include "component/tabList.php";?>
-        </div>
-        
-
-        
-       
-    </div>
-    
 </body>
 	<script>
 		function Redirect(id)
@@ -133,29 +114,6 @@
     		window.location="projectContent.php?id="+id;
 		}
 	</script>
-  <script>
-        function myFunction() {
-        var input , myText , myCard ,detail, text, i , j;
-		input = document.getElementById("search");
-		myText = input.value.toUpperCase();
-
-        myHeadCard = document.getElementById("myCard");
-
-        myCard = myHeadCard.getElementsByTagName("div");
-		
-        for(i = 0 ; i < myCard.length; i+=7){
-			detail = myCard[i].getElementsByTagName("div");
-			text = detail[3].getElementsByTagName("h4");
-
-			if(text[0].innerHTML.toUpperCase().indexOf(myText) > -1){
-				myCard[i].style.display="";
-			}
-			else{
-				myCard[i].style.display = "none";
-			}
-		}
-		}
-    </script>
 <!--   Core JS Files   -->
 <script src="assets/js/jquery-3.1.0.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>

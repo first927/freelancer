@@ -21,11 +21,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
             <ul  class="nav navbar-nav navbar-right">
-                
 
+                    <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
+                    <a class="navbar-brand" href="#"><i class="material-icons" >store</i>MyJob</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
-
-
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
 
             </ul><!--navbar-right-->
