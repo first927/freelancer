@@ -14,15 +14,15 @@
 	    	<div class="sidebar-wrapper">
 	            <ul class="nav">
 	                <li class="active">
-	                    <a href="#">
+	                    <a >
 	                        <i class="material-icons">dashboard</i>
-	                        <p>Dashboard</p>
+	                        <p>Programmer</p>
 	                    </a>
 	                </li>
 	                <li>
-	                    <a href="#">
+	                    <a >
 	                        <i class="material-icons">person</i>
-	                        <p>User Profile</p>
+	                        <p>Programmer2</p>
 	                    </a>
 	                </li>
 

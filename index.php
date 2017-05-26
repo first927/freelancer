@@ -92,6 +92,9 @@
             position:relative ;
             display : block ; 
         }
+        .show-box{
+            box-shadow: 0px 0px 20px  black ;
+        }
 
     </style>
 </head>
@@ -114,10 +117,10 @@
 	    	</div>
     </div>
     <div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <?php include "component/sideMenu.php"; ?>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-10">
             <?php include "component/tabList.php";?>
         </div>
         
@@ -127,10 +130,11 @@
     </div>
     
 </body>
+
 	<script>
 		function Redirect(id)
 		{
-    		window.location="projectContent.php?id="+id;
+    		window.location="projectDetail.php?proID="+id;
 		}
 	</script>
   <script>
@@ -157,7 +161,7 @@
 		}
     </script>
 <!--   Core JS Files   -->
-<script src="assets/js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/material.min.js" type="text/javascript"></script>
 
@@ -175,7 +179,24 @@
 
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
+<script>
+    $(document).ready(function(){
 
+        $("li").click(function(){
+            $("li").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $("div.col-md-3 > div.card").mouseover(function(){
+            $(this).addClass("show-box");
+        });
+
+        $("div.card").mouseleave(function(){
+            $(this).removeClass("show-box");
+        });
+    });
+    
+</script>
 <script>
     var header_height;
     var fixed_section;
