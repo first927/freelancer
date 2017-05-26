@@ -92,8 +92,10 @@
     </style>
 </head>
 <body>
-    <jsp:directive.include file="component/navbar.jsp" />
-    <jsp:directive.include file="component/JobList.jsp" />
+    <?php 
+        include "component/navbar.php";
+        include "component/JobList.php";
+    ?>
 </body>
 	<script>
 		function Redirect(id)
