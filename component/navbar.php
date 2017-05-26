@@ -1,6 +1,6 @@
 
 <?php
-if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'] == "/freelancer/index.php"){
+if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'] == "/freelancer/index.php" || $_SERVER['REQUEST_URI'] == "/freelancer/"){
 ?>
 <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" >
     <div class="container">
