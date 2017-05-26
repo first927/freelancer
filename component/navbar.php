@@ -44,9 +44,11 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                                     </div>
                                     <form  role="form" method="post" action="register.inc.php">
                                     <div class="modal-body" style="padding:40px 50px;">
-                                                    <div class="form-group">
-                                                        <label for="name"><span class="material-icons">person</span>Name</label>
-                                                        <input required type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                                    <div class="form-group label-floating">
+                                                        
+                                                        <label class="control-label" for="name"><span class="material-icons">person</span>Name</label>
+                                                        <br>
+                                                        <input required type="text" class="form-control" id="name" name="name">
                                                     </div>
 
                                                     <div class="form-group">
