@@ -94,8 +94,28 @@
             display : block ; 
         }
         .show-box{
+            box-shadow: 0px 0px 0px  black ;
+            animation-name: fadeBackShadow ;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            
+        }
+        .show-box:hover{
+            animation-name: fadeShadow ;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
             box-shadow: 0px 0px 20px  black ;
         }
+
+        @keyframes fadeShadow {
+            from {box-shadow: 0px 0px 0px  black ;}
+            to {box-shadow: 0px 0px 20px  black ;}
+        }
+        @keyframes fadeBackShadow {
+            from {box-shadow: 0px 0px 20px  black ;}
+            to {box-shadow: 0px 0px 0px  black ;}
+        }
+
         .sub-content {
            float: right;
         }
@@ -195,13 +215,13 @@ $(document).ready(function(){
     });
 
     //add shoadow to box when mouse over
-    $("div.col-md-3 > div.card , .myjob-header , .card-stats").mouseover(function() {
-        $(this).addClass("show-box");
-    });
+    // $("div.col-md-3 > div.card , .myjob-header , .card-stats").mouseover(function() {
+    //     $(this).addClass("show-box");
+    // });
 
-    $("div.card").mouseleave(function() {
-        $(this).removeClass("show-box");
-    });
+    // $("div.card").mouseleave(function() {
+    //     $(this).removeClass("show-box");
+    // });
 
 
 

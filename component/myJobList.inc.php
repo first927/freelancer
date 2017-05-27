@@ -3,7 +3,7 @@
     $i = 0;
     while($i < 10){ ?>
 <div >
-    <div class="card myjob-header">
+    <div class="card myjob-header show-box">
         <div class="card-header " data-background-color="blue" onclick="showJob(<?php echo $i; ?>)">
             <h4 class="title">
                 <b class="col-md-10">JobName </b>
@@ -69,8 +69,8 @@
             <div class='stats col-md-10' >
 				<i class='material-icons'>access_time</i> since 1996
 			</div>
-            <div class="stats col-md-2">
-                <i class="material-icons text-warning ">settings</i> <a href="projectDetail.php?proID=<?php echo $i ;?>">manage your job</a>
+            <div class="stats col-md-2 ">
+                <i class="material-icons text-warning ">settings</i> <a  href="projectDetail.php?proID=<?php echo $i ;?>">manage your job</a>
             </div>
             
         </div>

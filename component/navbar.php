@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
             <a >
 
                 <div class="brand">
-                    <a class="navbar-brand" href="index.php"><i class="material-icons" >content_copy</i>Library Lab</a>
+                    <a class="navbar-brand" href="index.php"><i class="material-icons" >visibility</i>FIND MY JOB</a>
                 </div>
             </a>
         </div>
@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
             <a >
 
                 <div class="brand">
-                    <a class="navbar-brand" href="index.php"><i class="material-icons" >content_copy</i>Library Lab</a>
+                    <a class="navbar-brand" href="index.php"><i class="material-icons"  >visibility</i>FIND MY JOB</a>
                 </div>
             </a>
         </div>
