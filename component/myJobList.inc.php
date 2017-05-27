@@ -1,63 +1,78 @@
-<div class="container">
+
 <?php 
     $i = 0;
     while($i < 10){ ?>
 <div >
-    <div class="card">
-        <div class="card-header" data-background-color="purple">
-            <h4 class="title"><b>JobName</b></h4>
-            <p class="category ">Here is a subtitle for this table</p>
-            <h2  style="float:right; color: black" ><b>Position: Programmer</b></h2>
+    <div class="card myjob-header show-box">
+        <div class="card-header " data-background-color="blue" onclick="showJob(<?php echo $i; ?>)">
+            <h4 class="title">
+                <b class="col-md-10">JobName </b>
+                <a class="text-danger col-md-2"><small>(click for more detail)</small></a>
+            </h4>
+            <p class="category"><strong>Position: Programmer</strong></p>
 	    </div>
+ 
         
 
-        
-        <div class="card-content">
-            <p class="category">Detail:</p>
+        <?php echo "<div class='myjob-content' id='$i'>"; ?>
+            <div class="card-content">
+            <p class="category">DETAIL:</p>
             
-        </div>
+            </div>
 
-        <div class="sub-content col-md-11">
-                    <p > your detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here
-                detail here your detail here your detail here your detail here
-                your detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here
-                detail here your detail here your detail here your detail here
-                your detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here
-                detail here your detail here your detail here your detail here
-                your detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here
-                detail here your detail here your detail here your detail here
-                your detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here
-                detail here your detail here your detail here your detail here
-                your detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here
-                detail here your detail here your detail here your detail here
-                your detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here
-                detail here your detail here your detail here your detail here
-                your detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here your 
-                detail here your detail here your detail here your detail here
-                detail here your detail here your detail here your detail here
-                    detail here your detail here your detail here your detail here </p>
+            <div class="sub-content col-md-11">
+                        <p > your detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here
+                    detail here your detail here your detail here your detail here
+                    your detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here
+                    detail here your detail here your detail here your detail here
+                    your detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here
+                    detail here your detail here your detail here your detail here
+                    your detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here
+                    detail here your detail here your detail here your detail here
+                    your detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here
+                    detail here your detail here your detail here your detail here
+                    your detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here
+                    detail here your detail here your detail here your detail here
+                    your detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here
+                    detail here your detail here your detail here your detail here
+                    your detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here your 
+                    detail here your detail here your detail here your detail here
+                    detail here your detail here your detail here your detail here
+                        detail here your detail here your detail here your detail here </>
+            </div>
+            <div class="card-content">
+                <p class="category">COLLABOLATOR:</p>
+                
+            </div>
+            <div class="sub-content col-md-12">
+                <?php include "collaboratorList.inc.php" ?>
+            </div>
         </div>
-        <div class="card-content">
-            <p class="category">Collaborator:</p>
+        
+        <div class="card-footer" style="margin-bottom:5%;">
+            <hr>
+            <div class='stats col-md-10' >
+				<i class='material-icons'>access_time</i> since 1996
+			</div>
+            <div class="stats col-md-2 ">
+                <i class="material-icons text-warning ">settings</i> <a  href="projectDetail.php?proID=<?php echo $i ;?>">manage your job</a>
+            </div>
             
-        </div>
-        <div class="sub-content col-md-12">
-             <?php include "collaboratorList.inc.php" ?>
         </div>
 
 
@@ -68,4 +83,3 @@
 
 
 <?php  $i++; } ?>
-</div>

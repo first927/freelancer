@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
             <a >
 
                 <div class="brand">
-                    <a class="navbar-brand" href="index.php"><i class="material-icons" >content_copy</i>Library Lab</a>
+                    <a class="navbar-brand" href="index.php"><i class="material-icons" >visibility</i>FIND MY JOB</a>
                 </div>
             </a>
         </div>
@@ -25,7 +25,6 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
             <ul  class="nav navbar-nav navbar-right">
 
                     <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
-                    <a class="navbar-brand" href="http://localhost/freelancer/myJob.php"><i class="material-icons" >store</i>MyJob</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
 
@@ -62,7 +61,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
             <a >
 
                 <div class="brand">
-                    <a class="navbar-brand" href="index.php"><i class="material-icons" >content_copy</i>Library Lab</a>
+                    <a class="navbar-brand" href="index.php"><i class="material-icons"  >visibility</i>FIND MY JOB</a>
                 </div>
             </a>
         </div>
@@ -72,7 +71,6 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
             <ul  class="nav navbar-nav navbar-right">
 
                     <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
-                    <a class="navbar-brand" href="http://localhost/freelancer/myJob.php"><i class="material-icons" >store</i>MyJob</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
 

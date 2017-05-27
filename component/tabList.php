@@ -16,10 +16,16 @@
 							FREELANCE
 						<div class="ripple-container"></div></a>
 					</li>
+					<li class="">
+						<a href="#myjob" data-toggle="tab">
+							<i class="material-icons" >store</i>
+							MYJOB
+						<div class="ripple-container"></div></a>
+					</li>
                     <li class="">
 						<a href="#fb" data-toggle="tab">
 							<i class="material-icons">code</i>
-							FACEBOOK
+							YOUTUBE
 						<div class="ripple-container"></div></a>
 					</li>
 				</ul>
@@ -35,11 +41,12 @@
 			<div class="tab-pane" id="messages">
 				<?php include "freelanceList.php" ; ?>
 			</div>
+			<div class="tab-pane" id="myjob">
+				<?php include "myJobList.inc.php" ; ?>
+			</div>
             <div class="tab-pane" id="fb">
 				<div class="iframe-container hidden-sm hidden-xs">
-					    <iframe src="https://www.w3schools.com/">
-						<p>Your browser does not support iframes.</p>
-						</iframe>
+					    <iframe width="560" height="315" src="https://www.youtube.com/embed/e1vknPjU7Sw" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
             

@@ -95,9 +95,8 @@
         .show-box{
             box-shadow: 0px 0px 20px  black ;
         }
-        .sub-content {
-           float: right;
-        }
+        
+        
    
 
     </style>

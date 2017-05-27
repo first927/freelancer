@@ -94,14 +94,42 @@
             display : block ; 
         }
         .show-box{
+            box-shadow: 0px 0px 0px  black ;
+            animation-name: fadeBackShadow ;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            
+        }
+        .show-box:hover{
+            animation-name: fadeShadow ;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
             box-shadow: 0px 0px 20px  black ;
         }
-        
+
+        @keyframes fadeShadow {
+            from {box-shadow: 0px 0px 0px  black ;}
+            to {box-shadow: 0px 0px 20px  black ;}
+        }
+        @keyframes fadeBackShadow {
+            from {box-shadow: 0px 0px 20px  black ;}
+            to {box-shadow: 0px 0px 0px  black ;}
+        }
+
+        .sub-content {
+           float: right;
+        }
+        .myjob-content{
+            display:none;
+        }
 
     </style>
 </head>
 <body>
-    <?php  include "component/navbar.php"; ?>
+    <?php  
+        include "component/navbar.php"; 
+        include "component/userprofileModal.inc.php" ;
+    ?>
     <div>
         	<div class="content">
 	            <div class="container-fluid">
@@ -180,20 +208,33 @@
 
 <script>
 $(document).ready(function(){
+    //toggle side menu
     $("div.sidebar-wrapper  li").click(function() {
         $("div.sidebar-wrapper li").removeClass("active");
         $(this).addClass("active");
     });
 
-    $("div.col-md-3 > div.card").mouseover(function() {
-        $(this).addClass("show-box");
-    });
+    //add shoadow to box when mouse over
+    // $("div.col-md-3 > div.card , .myjob-header , .card-stats").mouseover(function() {
+    //     $(this).addClass("show-box");
+    // });
 
-    $("div.card").mouseleave(function() {
-        $(this).removeClass("show-box");
-    });
+    // $("div.card").mouseleave(function() {
+    //     $(this).removeClass("show-box");
+    // });
+
+
+
+
+    
 });
+
+function showJob(id){
+        //hide/show myjob content
+        $("#"+id).slideToggle(500);
+    }
 </script>
+
 <script>
     var header_height;
     var fixed_section;
