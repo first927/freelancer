@@ -1,7 +1,7 @@
 <?php 
     $i = 0;
     while($i < 9){ ?>
-    	<div class='col-md-3' onclick="Redirect('<?php echo $id;?>');">
+    	<div class='col-md-3' onclick="popupModal(<?php echo $i; ?>)" data-toggle="modal" data-target="#profileModal">
 				<div class='card show-box'>
 					<div class='card-header card-chart' data-background-color='orange'>
 						<div class='ct-chart' id='dailySalesChart'></div>

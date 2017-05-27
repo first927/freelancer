@@ -5,11 +5,12 @@
 <div >
     <div class="card myjob-header show-box">
         <div class="card-header " data-background-color="blue" onclick="showJob(<?php echo $i; ?>)">
-            <h4 class="title">
+            <h4 class="title" style="margin-bottom:1px;">
                 <b class="col-md-10">JobName </b>
                 <a class="text-danger col-md-2"><small>(click for more detail)</small></a>
             </h4>
-            <p class="category"><strong>Position: Programmer</strong></p>
+            <p class="subtitle " ><strong>Position: Programmer</strong></p>
+            <span class="label label-warning col-md-2" style="float:right">Pending...</span>
 	    </div>
  
         

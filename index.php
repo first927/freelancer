@@ -122,6 +122,10 @@
         .myjob-content{
             display:none;
         }
+        .subtitle{
+            color:black;
+            margin: 0px;
+        }
 
     </style>
 </head>
@@ -228,7 +232,9 @@ $(document).ready(function(){
 
     
 });
-
+function popupModal(id){
+    $("#profileModal  h4").text("User ");
+}
 function showJob(id){
         //hide/show myjob content
         $("#"+id).slideToggle(500);

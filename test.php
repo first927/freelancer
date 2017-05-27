@@ -92,37 +92,22 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button id="menu-toggle" type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar bar1"></span>
-                <span class="icon-bar bar2"></span>
-                <span class="icon-bar bar3"></span>
-            </button>
-            <a >
-
-                <div class="brand">
-                    <a class="navbar-brand" href="index.php"><i class="material-icons" >content_copy</i>Library Lab</a>
-                </div>
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-            <ul  class="nav navbar-nav navbar-right">
-
-                    <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
-                    <a class="navbar-brand" href="#"><i class="material-icons" >store</i>MyJob</a>
-                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
-                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
-
-            </ul><!--navbar-right-->
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+<div class="col-md-6">
+	<div class="card">
+		<div class="card-header card-chart" data-background-color="orange">
+			<div class="ct-chart" id="dailySalesChart"></div>
+		</div>
+		<div class="card-content">
+			<h4 class="title">Daily Sales</h4>
+			<p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
+		</div>
+		<div class="card-footer">
+			<div class="stats">
+				<i class="material-icons">access_time</i> updated 4 minutes ago
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 	<script>
 		function Redirect(id)
