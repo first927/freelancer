@@ -32,14 +32,14 @@
             background-size: cover;
         }
         #myCard{
-           overflow:auto;
-           width: 90%; 
-           height:500px; 
-           font-size: 14px;
-           margin-left: 5%;
-           margin-right: 5%;
-       }
-       pre.prettyprint{
+         overflow:auto;
+         width: 90%; 
+         height:500px; 
+         font-size: 14px;
+         margin-left: 5%;
+         margin-right: 5%;
+     }
+     pre.prettyprint{
         background-color: #eee;
         border: 0px;
         margin-bottom: 60px;
@@ -107,8 +107,9 @@
                 <h2 class="title" >JOB NAME <?php echo $pID; ?></h2>
             </div>
             <div class="card-content"  >
-                <h4 class="title" >Details</h4>
 
+                <h4 class="title" >Details</h4>
+                
                 <p class="category">
                     [รีวิว] ชีวิตฟรีดอม ก็ทำเงินได้ !<br>
                     ----------------------------------------------------<br>
@@ -160,6 +161,9 @@
 
                 <h4 class="category" style="float: right;"><b><i>- OOPS PRODUCTION.</i></b></h4>
 
+
+                // เห็นเฉพาะ Freelance นะจ้ะ //
+                <br>
                 <button type="button" id="toggleButton" class="btn btn-primary" data-toggle="collapse" data-target="#positions">Register to this job</button>
 
                 <div id="positions" class="collapse">
@@ -180,16 +184,17 @@
                   <button type="button" id="job7" class="btn btn-success active buttonAvailable">Front-End Programmer (Javascript, HTML, CSS)</button>
                   <button type="button" id="job8" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>    
               </div>
-
-
-          </div>
-          <div class="card-footer">
-            <div class="stats">
-                <i class="material-icons">access_time</i> updated 4 minutes ago
-                <p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
-            </div>
-        </div>
+              <br>
+              <br>
+            <?php include "component/positionsManagement.inc.php"; ?>
+</div>
+<div class="card-footer">
+    <div class="stats">
+        <i class="material-icons">access_time</i> updated 4 minutes ago
+        <p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
     </div>
+</div>
+</div>
 </div>
 </body>
 
@@ -248,10 +253,12 @@
             $(".buttonAvailable").show(499);
             $(".buttonUnavailable").show(499);
         });
+
     });
 
 
 
 
 </script>
+
 </html>
