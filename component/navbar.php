@@ -95,40 +95,34 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                                     </div>
                                     <form  role="form" method="post" action="register.inc.php">
                                     <div class="modal-body" style="padding:40px 50px;">
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="name"><span class="material-icons">person</span> Name</label>
-                                                        <br>
-                                                        <input required type="text" class="form-control" id="name" name="name" >
+                                                    <div class="form-group">
+                                                        <label for="name"><span class="material-icons">person</span>Name</label>
+                                                        <input required type="text" class="form-control" id="name" name="name" placeholder="Name">
                                                     </div>
 
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="sname"><span class="material-icons">person</span> Surname</label>
-                                                        <br>
-                                                        <input required type="text" class="form-control" id="sname" name="sname">
+                                                    <div class="form-group">
+                                                        <label for="sname"><span class="material-icons">person</span>Surname</label>
+                                                        <input required type="text" class="form-control" id="sname" name="sname" placeholder="Surname">
                                                     </div>
 
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="username"><span class="material-icons">account_box</span> Username</label>
-                                                        <br>
-                                                        <input required type="text" class="form-control" id="username" name="username">
+                                                    <div class="form-group">
+                                                        <label for="username"><span class="material-icons">account_box</span>Username</label>
+                                                        <input required type="text" class="form-control" id="username" name="username" placeholder="Username">
                                                     </div>
 
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="pss"><span class="material-icons">lock</span> Password</label>
-                                                        <br>
-                                                        <input required type="password" class="form-control" id="pss" name="pss">
+                                                    <div class="form-group">
+                                                        <label for="pss"><span class="material-icons">lock</span>Password</label>
+                                                        <input required type="password" class="form-control" id="pss" name="pss" placeholder="Password">
                                                     </div>
 
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="tel"><span class="material-icons">phone</span> Phone Number</label>
-                                                        <br>
-                                                        <input required type="text" class="form-control" id="tel" name="tel" >
+                                                    <div class="form-group">
+                                                        <label for="tel"><span class="material-icons">phone</span>Phone Number</label>
+                                                        <input required type="text" class="form-control" id="tel" name="tel" placeholder="Phone Number" >
                                                     </div>
 
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="email"><span class="material-icons">email</span> E-mail</label>
-                                                        <br>
-                                                        <input required type="email" class="form-control" id="email" name="email">
+                                                    <div class="form-group">
+                                                        <label for="email"><span class="material-icons">email</span>E-mail</label>
+                                                        <input required type="email" class="form-control" id="email" name="email" placeholder="E-mail">
                                                     </div>
                                     </div>
 
