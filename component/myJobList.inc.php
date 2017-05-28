@@ -2,7 +2,7 @@
 <?php 
     $i = 0;
     while($i < 10){ ?>
-<div >
+<div class="col-md-12">
     <div class="card myjob-header show-box">
         <div class="card-header " data-background-color="blue" onclick="showJob(<?php echo $i; ?>)">
             <h4 class="title" style="margin-bottom:1px;">
@@ -10,7 +10,17 @@
                 <a class="text-danger col-md-2"><small>(click for more detail)</small></a>
             </h4>
             <p class="subtitle " ><strong>Position: Programmer</strong></p>
-            <span class="label label-warning col-md-2" style="float:right">Pending...</span>
+                <?php 
+                    if($i%2 == 0){
+                        echo "<span class='label label-warning col-md-2' style='float:right'>Pending...</span>" ;
+                    }
+                    else if($i%3 == 0){
+                         echo "<span class='label label-success col-md-2' style='float:right'>Accepted</span>" ;
+                    }else{
+                         echo "<span class='label label-danger col-md-2' style='float:right'>Canceled</span>" ;
+                    }
+                ?>
+            
 	    </div>
  
         

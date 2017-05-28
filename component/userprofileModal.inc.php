@@ -15,7 +15,7 @@
     			<div class="content">
                     
     				<h6 class="category text-gray">POSITION</h6>
-    				<h4 class="card-title">Name Surname</h4>
+    				<h4 class="card-title" id="profiletitle">Name Surname</h4>
                     <hr>
                     <p class="category ">CONTRACT</p>
                     <div class="col-md-6">

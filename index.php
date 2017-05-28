@@ -233,7 +233,7 @@ $(document).ready(function(){
     
 });
 function popupModal(id){
-    $("#profileModal  h4").text("User ");
+    $("#profileModal  #profiletitle").text("User ");
 }
 function showJob(id){
         //hide/show myjob content

@@ -2,7 +2,7 @@
     $i = 0;
     while($i < 8){ ?>
     	<div class='col-md-3' onclick="Redirect('<?php echo $i;?>');">
-				<div class='card'>
+				<div class='card show-box'>
 					<div class='card-header card-chart' data-background-color='orange'>
 						<div class='ct-chart' id='dailySalesChart'></div>
 					</div>
