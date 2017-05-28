@@ -48,7 +48,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
 </div>
 <?php
 }else{ ?>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -78,7 +78,12 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
+<div class="col-lg-12">
+</div>
+<div class="col-lg-12">
+</div>
+<div class="col-lg-12">
+</div>
 <?php
 }
 ?>
