@@ -58,7 +58,7 @@
 
                         <br>
 
-                        <p class="category"><b>PRICE : 29000 thb.<b></p>
+                        <p class="category"><b>PRICE : 29000 thb.</b></p>
                         <br>
                         <br>
 
