@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
         <div class="collapse navbar-collapse">
             <ul  class="nav navbar-nav navbar-right">
 
-                    <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
+                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalAddJob"><i class="material-icons" >add</i>AddJobs</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
 
@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
         <div class="collapse navbar-collapse">
             <ul  class="nav navbar-nav navbar-right">
 
-                    <a class="navbar-brand" href="#"><i class="material-icons" >add</i>AddJobs</a>
+                    <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalAddJob"><i class="material-icons" >add</i>AddJobs</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalRegister"><i class="material-icons" >person_outline</i>Sign Up</a>
                     <a class="navbar-brand" href="#" data-toggle="modal" data-target="#modalLogin"><i class="material-icons" >lock</i>Log in</a>
 
@@ -175,3 +175,60 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Modal AddJob-->
+                        <div class="modal fade" id="modalAddJob" role="dialog" >
+                            <div class="modal-dialog" style="width: 400px">
+                                <div class="modal-content" style="color: #1a237e">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title" align="center">Add Jobs</h3>
+                                    </div>
+                                    <div class="modal-body" style="padding:40px 50px;">
+                                        <form method="post">
+                                            <div class="form-group">
+                                                <label for="namejob"><span class="material-icons">store</span>Name Project</label>
+                                                <input required class="form-control" type="text" name="nameP" id="nameP" placeholder="Name Project">
+                                            </div>
+                                            <div>
+                                                <label for="detail"><span class="material-icons">assignment</span>Detail</label>
+                                                <textarea  rows="5" class="form-control" name="detail" placeholder="Detail your project" ></textarea>
+                                            </div>
+                                            <div id="job_earn" >
+                                                <div class="form-group">
+                                                    <label for="skill"><span class="material-icons">local_library</span>Select Skill</label>
+                                                    <input required class="form-control" type="text" name="skill_1" id="skill_1">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="earn"><span class="material-icons">attach_money</span>Earning</label>
+                                                    <input required class="form-control" type="number" name="earning_1" id="earning_1">
+                                                    <label for="earn"><span class="material-icons">add</span>Add More Skill </label>
+                                                    <button type="button" id="add_form()" onclick="addForm()" class="btn btn-success"><i class="material-icons">plus_one</i></button>
+                                                </div>
+
+                                            </div>
+                                            <div align="center">
+                                                <button type="submit" class="btn btn-success" name="submitbtn" value="login">Submit</button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal" >CanCel</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<script>
+    //Script AddJobs
+    var i = 1;
+    function addForm() {
+        if (i<=100){
+            i++;
+            var div = document.createElement('div');
+            div.innerHTML = '<div class="form-group"><label for="skill"><span class="material-icons">local_library</span>Select Skill</label><input required class="form-control" type="text" name="skill_'+i+'""></div><div class="form-group"> <label for="earn"><span class="material-icons">attach_money</span>Earning</label><input required class="form-control" type="number" name="earning_'+i+'""></div><label for="earn"><span class="material-icons">add</span>Delete</label> <button type="button" id="remove_form()" onclick="removeForm(this)" class="btn btn-danger"><i class="material-icons">delete</i></button>';
+            document.getElementById('job_earn').appendChild(div);
+        }
+    }
+    function removeForm(div) {
+        document.getElementById('job_earn').removeChild(div.parentNode);
+    }
+
+</script>
