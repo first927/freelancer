@@ -126,13 +126,24 @@
             color:black;
             margin: 0px;
         }
-
+        .card-profile > button.btn{
+            position:absolute; 
+            right: 2%;
+        }
+        #inviteForm{
+            display : none;
+            margin: auto;
+        }
+        #inviteForm .form-group{
+            text-align : left;
+        } 
     </style>
 </head>
 <body>
     <?php  
         include "component/navbar.php"; 
         include "component/userprofileModal.inc.php" ;
+        include "component/jobInviteModal.inc.php";
     ?>
     <div>
         	<div class="content">
@@ -218,20 +229,22 @@ $(document).ready(function(){
         $(this).addClass("active");
     });
 
-    //add shoadow to box when mouse over
-    // $("div.col-md-3 > div.card , .myjob-header , .card-stats").mouseover(function() {
-    //     $(this).addClass("show-box");
-    // });
-
-    // $("div.card").mouseleave(function() {
-    //     $(this).removeClass("show-box");
-    // });
-
-
-
-
-    
+    $('[data-toggle="tooltip"]').tooltip();
 });
+function popupInvite(){
+    $("#profileModal  #showForm").fadeToggle(500);
+    setTimeout(function() {
+        $("#profileModal  #inviteForm").fadeToggle(500);
+    }, 500); 
+    var sign = $("#profileModal  .main-icon").text();
+    if(sign == "backspace"){
+        $("#profileModal  .main-icon").text("add");
+    }else{
+        $("#profileModal  .main-icon").text("backspace");
+    }
+    
+     //$("#profileModal").fadeToggle(500);
+}
 function popupModal(id){
     $("#profileModal  #profiletitle").text("User ");
 }
