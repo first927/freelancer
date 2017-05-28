@@ -106,7 +106,7 @@
             <div class="card-content">
 
                 <h4 class="title" >Details</h4>
-                
+
                 <p class="category">
                     [รีวิว] ชีวิตฟรีดอม ก็ทำเงินได้ !<br>
                     ----------------------------------------------------<br>
@@ -166,6 +166,8 @@
 
                 <br>
                 <?php include "component/agreementDetails.inc.php"; ?>
+                <br>
+                <!-- <?php include "component/addAgreement.inc.php"; ?> -->
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -209,24 +211,6 @@
         $(window).on('scroll', md.checkScrollForTransparentNavbar);
         demo.initDocumentationCharts();
 
-        $(".buttonAvailable").click(function (e) {
-           // $(this).text("lerpso");
-           e.preventDefault();
-            // alert($(this).attr("id"));
-            confirm("Do you wanna register to "+$(this).attr("id")+" ?");
-
-        });
-
-        $(".selectAvailable").click(function (e) {
-            e.preventDefault();
-            $(".buttonAvailable").show(499);
-            $(".buttonUnavailable").hide(499);
-        });
-        $(".selectUnavailable").click(function (e) {
-            e.preventDefault();
-            $(".buttonAvailable").hide(499);
-            $(".buttonUnavailable").show(499);
-        });
         $(".selectAll").click(function (e) {
             e.preventDefault();
             $(".buttonAvailable").show(499);

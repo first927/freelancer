@@ -8,13 +8,13 @@
                             <span class="nav-tabs-title">Positions Management: </span>
                             <ul class="nav nav-tabs" data-tabs="tabs">
                               <li class="active">
-                                 <a href="#profile" data-toggle="tab">
+                                 <a href="#Front-End" data-toggle="tab" class="tabBar">
                                     Front-End Programmer
                                     <div class="ripple-container"></div>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="#messages" data-toggle="tab">
+                                <a href="#Back-End" data-toggle="tab" class="tabBar">
                                     Back-End Programmer
                                     <div class="ripple-container"></div>
                                 </a>
@@ -24,9 +24,9 @@
                 </div>
             </div>
 
-            <div class="card-content">
+            <div class="card-content" id="posManageContent">
                 <div class="tab-content">
-                    <div class="tab-pane active" id="profile">
+                    <div class="tab-pane active" id="Front-End">
                         // List คนสมัครในตำแหน่งนี้ //
                         <table class="table table-hover">
                             <thead>
@@ -45,7 +45,7 @@
                             <td style="text-align: center;">
                                 <div class="btn-group btn-group-md">
                                     <button type="button" class="btn btn-success">Accept</button>
-                                    <button type="button" class="btn btn-warning">Reply</button>
+                                    <button type="button" id="user1" value="pos1" class="btn btn-warning btnReply">Reply</button>
                                     <button type="button" class="btn btn-danger">Decline</button>
                                 </div>
                             </td>
@@ -57,7 +57,7 @@
                             <td style="text-align: center;">
                                 <div class="btn-group btn-group-md">
                                     <button type="button" class="btn btn-success">Accept</button>
-                                    <button type="button" class="btn btn-warning">Reply</button>
+                                    <button type="button" id="user2" value="pos1" class="btn btn-warning btnReply">Reply</button>
                                     <button type="button" class="btn btn-danger">Decline</button>
                                 </div>
                             </td>
@@ -69,7 +69,7 @@
                             <td style="text-align: center;">
                                 <div class="btn-group btn-group-md">
                                     <button type="button" class="btn btn-success">Accept</button>
-                                    <button type="button" class="btn btn-warning">Reply</button>
+                                    <button type="button" id="user3" value="pos1" class="btn btn-warning btnReply">Reply</button>
                                     <button type="button" class="btn btn-danger">Decline</button>
                                 </div>
                             </td>
@@ -77,7 +77,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="tab-pane" id="messages">
+            <div class="tab-pane" id="Back-End">
                 // List คนสมัครในตำแหน่งนี้ //
                 <table class="table table-hover">
                     <thead>
@@ -96,7 +96,7 @@
                     <td style="text-align: center;">
                         <div class="btn-group btn-group-md">
                             <button type="button" class="btn btn-success">Accept</button>
-                            <button type="button" class="btn btn-warning">Reply</button>
+                            <button type="button" id="user1" value="pos2" class="btn btn-warning btnReply">Reply</button>
                             <button type="button" class="btn btn-danger">Decline</button>
                         </div>
                     </td>
@@ -108,7 +108,7 @@
                     <td style="text-align: center;">
                         <div class="btn-group btn-group-md">
                             <button type="button" class="btn btn-success">Accept</button>
-                            <button type="button" class="btn btn-warning">Reply</button>
+                            <button type="button" id="user2" value="pos2" class="btn btn-warning btnReply">Reply</button>
                             <button type="button" class="btn btn-danger">Decline</button>
                         </div>
                     </td>
@@ -116,16 +116,13 @@
             </tbody>
         </table>
     </div>
-    <div class="tab-pane" id="myjob">
-        <?php include "myJobList.inc.php" ; ?>
-    </div>
-    <div class="tab-pane" id="fb">
-        <div class="iframe-container hidden-sm hidden-xs">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/e1vknPjU7Sw" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
 </div>
 </div>
+</div>
+
+
+<div class="collapse" id="agreementCollapseInPosManage">
+    <?php include "component/addAgreement.inc.php"; ?>
 </div>
 
 <!-- Modal details -->
@@ -150,6 +147,8 @@
 </div>
 
 
+
+
 <script src="assets/js/jquery-3.1.0.min.js" type="text/javascript"></script>
 <script>
  $().ready(function(){
@@ -159,5 +158,28 @@
         // $(this).hide();
 
     });
+
+    $(".tabBar").click(function (e){
+        $("#agreementCollapseInPosManage").collapse("hide");
+    });
+
+    $("#posManageContent .btnReply").click(function (e) {
+           // $(this).text("lerpso");
+           e.preventDefault();
+            // alert($(this).attr("id"));
+            // confirm("Do you wanna register to "+$(this).attr("id")+" ?");
+            // $("#agreementCollapse").collapse("hide");
+            $("#agreementCollapseInPosManage #addAgreementJobID").text(<?php echo $pID; ?>);
+            // $("#addAgreementJobName").text();
+            $("#agreementCollapseInPosManage #addAgreementPosID").text($(this).attr("value"));
+            $("#agreementCollapseInPosManage #addAgreementUserID").text($(this).attr("id"));
+            $("#agreementCollapseInPosManage").collapse("show");
+    });
+
+    $("#agreementCollapseInPosManage #addAgreementBtnCancel").click(function (e){
+            $("#agreementCollapseInPosManage").collapse("hide");
+  });
 });
+
+
 </script>
