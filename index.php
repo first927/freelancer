@@ -95,9 +95,6 @@
         }
         .show-box{
             box-shadow: 0px 0px 0px  black ;
-            animation-name: fadeBackShadow ;
-            animation-duration: 0.5s;
-            animation-iteration-count: 1;
             
         }
 
@@ -112,16 +109,22 @@
             margin: 0px;
         }
         .card-profile > button.btn{
-            position:absolute; 
+            display: inline-block;
+        }
+        #profile-btn{
+            position:absolute;
             right: 2%;
         }
-        #inviteForm{
+        #inviteForm ,#profile-portfolio{
             display : none;
             margin: auto;
         }
         #inviteForm .form-group{
             text-align : left;
-        } 
+        }
+        #profile-save-btn ,#profile-backport-btn, #back-btn{
+            display:none;
+        }
     </style>
 </head>
 <body>
@@ -207,37 +210,10 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
 
+<!--button-controller in userProfile-Modal-->
+<script src="assets/myJs/buttonController.js"></script>
 <script>
-$(document).ready(function(){
-    //toggle side menu
-    $("div.sidebar-wrapper  li").click(function() {
-        $("div.sidebar-wrapper li").removeClass("active");
-        $(this).addClass("active");
-    });
 
-    $('[data-toggle="tooltip"]').tooltip();
-
-    $(".show-box").mouseover(function(){
-        $(this).animate({ boxShadow: "0px 0px 20px  black" } , 100);
-    });
-    $(".show-box").mouseleave(function(){
-        $(this).animate({ boxShadow: "0px 0px 0px  black" } , 100);
-    });
-});
-function popupInvite(){
-    $("#profileModal  #showForm").fadeToggle(500);
-    setTimeout(function() {
-        $("#profileModal  #inviteForm").fadeToggle(500);
-    }, 500); 
-    var sign = $("#profileModal  .main-icon").text();
-    if(sign == "backspace"){
-        $("#profileModal  .main-icon").text("add");
-    }else{
-        $("#profileModal  .main-icon").text("backspace");
-    }
-    
-     //$("#profileModal").fadeToggle(500);
-}
 function popupModal(id){
     $("#profileModal  #profiletitle").text("User ");
 }
