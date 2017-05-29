@@ -5,9 +5,13 @@
         <div class="modal-content" style="color: #1a237e">
             
             <div class="card card-profile">
+                <button class="btn btn-warning btn-fab btn-fab-mini btn-roundbtn-round" onclick="popupInvite()" >
+	                    <i class="material-icons edit-icon">build</i>
+                </button>
                 <button class="btn btn-success btn-fab btn-fab-mini btn-roundbtn-round" onclick="popupInvite()" >
 	                    <i class="material-icons main-icon">add</i>
                 </button>
+                
     			<div class="card-avatar" >
                     
     				<a href="#pablo">

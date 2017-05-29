@@ -100,21 +100,6 @@
             animation-iteration-count: 1;
             
         }
-        .show-box:hover{
-            animation-name: fadeShadow ;
-            animation-duration: 0.5s;
-            animation-iteration-count: 1;
-            box-shadow: 0px 0px 20px  black ;
-        }
-
-        @keyframes fadeShadow {
-            from {box-shadow: 0px 0px 0px  black ;}
-            to {box-shadow: 0px 0px 20px  black ;}
-        }
-        @keyframes fadeBackShadow {
-            from {box-shadow: 0px 0px 20px  black ;}
-            to {box-shadow: 0px 0px 0px  black ;}
-        }
 
         .sub-content {
            float: right;
@@ -205,6 +190,7 @@
 <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/material.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.animate-shadow.js" type="text/javascript"></script>
 
 <!--  Charts Plugin -->
 <script src="assets/js/chartist.min.js"></script>
@@ -230,6 +216,13 @@ $(document).ready(function(){
     });
 
     $('[data-toggle="tooltip"]').tooltip();
+
+    $(".show-box").mouseover(function(){
+        $(this).animate({ boxShadow: "0px 0px 20px  black" } , 100);
+    });
+    $(".show-box").mouseleave(function(){
+        $(this).animate({ boxShadow: "0px 0px 0px  black" } , 100);
+    });
 });
 function popupInvite(){
     $("#profileModal  #showForm").fadeToggle(500);
