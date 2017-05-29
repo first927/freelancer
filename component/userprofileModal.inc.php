@@ -1,7 +1,7 @@
 
 
 <div class="modal fade" id="profileModal" role="dialog" >
-    <div class="modal-dialog" style="width: 70%">
+    <div class="modal-dialog" style="width: 40%">
         <div class="modal-content" style="color: #1a237e">
             
             <div class="card card-profile">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
     				<div class="col-md-12" id="profile-portfolio">
-                        <p class="category ">PORTFOLIO( 8 lastest jobs )</p>
+                        <p class="category ">PORTFOLIO( 4 lastest jobs )</p>
                         <?php include "portfolio.inc.php"; ?>
                     </div>
 

@@ -7,7 +7,7 @@
 <button class="btn btn-info btn-fab btn-fab-mini btn-round" id="profile-port-btn" data-toggle="tooltip" data-placement="top" title="portfolio"  >
     <i class="material-icons edit-icon">folder</i>
 </button>
-<button class="btn btn-danger btn-fab btn-fab-mini btn-round" id="profile-backport-btn" data-toggle="tooltip" data-placement="top" title="portfolio"  >
+<button class="btn btn-danger btn-fab btn-fab-mini btn-round" id="profile-backport-btn" data-toggle="tooltip" data-placement="top" title="back"  >
     <i class="material-icons edit-icon">backspace</i>
 </button>
 <button class="btn btn-success btn-fab btn-fab-mini btn-round" id="invite-btn" data-toggle="tooltip" data-placement="top" title="invite" >

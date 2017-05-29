@@ -13,7 +13,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Enter your datail here</label>
-                                                    <textarea class="form-control"  rows="3"></textarea>
+                                                    <textarea class="form-control"  id="inviteDetail" name="inviteDetail" rows="3"></textarea>
                                                 </div>
                                             </div>
                                         </div>

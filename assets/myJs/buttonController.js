@@ -57,12 +57,15 @@ $(document).ready(function(){
     //invite
     $("#invite-btn").click(function(){
         $("#profileModal  #showForm").slideUp(500,function(){
-            $("#profileModal  #inviteForm").slideDown(500);
+            $("#profileModal  #inviteForm").slideDown(500,function(){
+                $('#inviteForm [rows="3"]').focus();
+            });
         });
         $(this).css("display","none");
         $("#back-btn").css("display","inline-block");
         $("#profile-edit-btn").css("display","none");
         $("#profile-port-btn").css("display","none");
+        
     });
     //back
     $("#back-btn").click(function(){
