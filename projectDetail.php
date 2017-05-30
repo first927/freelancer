@@ -32,14 +32,14 @@
             background-size: cover;
         }
         #myCard{
-           overflow:auto;
-           width: 90%; 
-           height:500px; 
-           font-size: 14px;
-           margin-left: 5%;
-           margin-right: 5%;
-       }
-       pre.prettyprint{
+         overflow:auto;
+         width: 90%; 
+         height:500px; 
+         font-size: 14px;
+         margin-left: 5%;
+         margin-right: 5%;
+     }
+     pre.prettyprint{
         background-color: #eee;
         border: 0px;
         margin-bottom: 60px;
@@ -92,12 +92,13 @@
 </style>
 </head>
 <body background="assets/img/bgTest.jpg">
+
     <?php 
     include "component/navbar.php";
-
+    include "assets/model/connectService.inc.php";
     $pID = $_GET["proID"];
-        // echo $path;
     ?>
+
     <div class="col-md-12" >
         <div class="card">
             <div class="card-header " data-background-color="purple">
@@ -199,6 +200,9 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
 
+<!-- <script src="connectService.inc.js"></script> -->
+
+
 <script>
     var header_height;
     var fixed_section;
@@ -216,12 +220,13 @@
             $(".buttonAvailable").show(499);
             $(".buttonUnavailable").show(499);
         });
-
+        // var g = '<?=getContent("job/getAll")?>';
+        // alert(g);
+        
     });
 
 
 
 
 </script>
-
 </html>
