@@ -1,4 +1,13 @@
 <?php 
+
+
+
+$obj = json_decode(file_get_contents('http://10.34.13.168:8080/OOP/rest/job/getAll'));
+
+//var_dump($obj);
+
+echo count($obj->Job); 
+
     $i = 0;
     while($i < 9){ ?>
     	<div class='col-md-3 ' onclick="Redirect('<?php echo $i;?>');">

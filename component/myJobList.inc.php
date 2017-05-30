@@ -1,8 +1,14 @@
 
 <?php 
     $i = 0;
-    while($i < 10){ ?>
-<div class="col-md-12">
+    while($i < 10){
+        $page = floor($i/3);
+        if($page == 0){?>
+            <div class="col-md-12 myjob-box"  id='<?php echo "page-$page" ; ?>'>
+        <?php }else{ ?>
+            <div class="col-md-12 myjob-box" style="display:none" id='<?php echo "page-$page" ; ?>'> 
+        <?php }?>
+
     <div class="card myjob-header show-box">
         <div class="card-header " data-background-color="blue" onclick="showJob(<?php echo $i; ?>)">
             <h4 class="title" style="margin-bottom:1px;">
@@ -27,8 +33,7 @@
 
         <?php echo "<div class='myjob-content' id='$i'>"; ?>
             <div class="card-content">
-            <p class="category">DETAIL:</p>
-            
+                <p class="category">DETAIL:</p>
             </div>
 
             <div class="sub-content col-md-11">
@@ -64,7 +69,7 @@
                     detail here your detail here your detail here your detail here your 
                     detail here your detail here your detail here your detail here
                     detail here your detail here your detail here your detail here
-                        detail here your detail here your detail here your detail here </>
+                        detail here your detail here your detail here your detail here
             </div>
             <div class="card-content">
                 <p class="category">COLLABOLATOR:</p>
@@ -90,7 +95,38 @@
     </div>
     
 </div>
+
+
     
 
 
 <?php  $i++; } ?>
+<style>
+    .pagination-tab{
+        margin:auto;
+        width: 100%;
+        text-align:center;
+    }
+
+</style>
+
+<div class="col-md-12 pagination-tab">
+    <ul class="pagination pagination-danger">
+    <?php
+        $i=0;
+        while($i<10){ 
+            $page = floor($i/3);
+            if($i%3==0){
+                if($i==0){?>
+                    <li class="active" id="page-<?php echo $page; ?>"><a class="active pagination-button" id="page-<?php echo $page; ?>" href='#page-<?php echo $page; ?>'><?php echo $i/3; ?></a></li>
+                <?php }else{ ?>
+                
+                    <li id="page-<?php echo $page; ?>"><a class="pagination-button" id="page-<?php echo $page; ?>" href="#page-<?php echo $page; ?>"><?php echo $i/3; ?></a></li>
+                <?php }
+            }?>
+        <?php $i++;    
+        } ?>
+    </ul>
+</div>
+
+

@@ -125,6 +125,7 @@
         #profile-save-btn ,#profile-backport-btn, #back-btn{
             display:none;
         }
+        
     </style>
 </head>
 <body>
@@ -141,6 +142,7 @@
             <?php include "component/tabList.php";?>
         </div>
     </div>
+    
     
 </body>
 
@@ -196,6 +198,17 @@
 
 <!--button-controller in userProfile-Modal-->
 <script src="assets/myJs/buttonController.js"></script>
+    
+<script>
+    $(".pagination-button").click(function(){
+       var page = $(this).attr("id");
+        $(".myjob-box").hide();
+        $("div#"+page).show();
+        $("li.active").removeClass("active");
+        $("li#"+page).addClass("active");
+//        $("div#"+page).css("display","block");
+    });
+</script>
 <script>
 
 function popupModal(id){

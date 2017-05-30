@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                 </div>
             </a>
         </div>
-
+        
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
             <ul  class="nav navbar-nav navbar-right">
@@ -32,16 +32,13 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-              
-<div class="myFade">
-
-</div>
 
 
 <div class="page-header header-filter" style="background-image: url('assets/img/headBar.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                <h1 class="title text-center">Match your job here!</h1>
             </div>
         </div>
     </div>
@@ -83,6 +80,16 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
 <div class="col-lg-12">
 </div>
 <div class="col-lg-12">
+</div>
+
+<div class="page-header header-filter" style="background-image: url('assets/img/headBar.jpg');height:20%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="title text-center">Match your job here!</h1>
+            </div>
+        </div>
+    </div>
 </div>
 <?php
 }
