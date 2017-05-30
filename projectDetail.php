@@ -98,7 +98,7 @@
     include "assets/model/connectService.inc.php";
     $pID = $_GET["proID"];
     ?>
-
+    
     <div class="col-md-12" >
         <div class="card">
             <div class="card-header " data-background-color="purple">
@@ -220,8 +220,6 @@
             $(".buttonAvailable").show(499);
             $(".buttonUnavailable").show(499);
         });
-        // var g = '<?=getContent("job/getAll")?>';
-        // alert(g);
         
     });
 
