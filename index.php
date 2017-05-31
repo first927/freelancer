@@ -20,6 +20,7 @@
     <link href="documentation/css/demo-documentation.css" rel="stylesheet" />
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <?php include "assets/model/connectService.inc.php"; ?>
 
 
     <style>
@@ -130,12 +131,14 @@
 </head>
 <body>
     <?php  
+        
         include "component/navbar.php"; 
         include "component/userprofileModal.inc.php" ;
         include "component/jobInviteModal.inc.php";
     ?>
     <div>
         <div class="col-md-2">
+            <?php include "component/jobSearchBar.inc.php"; ?>
             <?php include "component/sideMenu.php"; ?>
         </div>
         <div class="col-md-10">
@@ -199,6 +202,7 @@
 <!--button-controller in userProfile-Modal-->
 <script src="assets/myJs/buttonController.js"></script>
     
+
 <script>
     $(".pagination-button").click(function(){
        var page = $(this).attr("id");

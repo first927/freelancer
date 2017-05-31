@@ -1,7 +1,13 @@
+<style>
+    ul.nav-tabs li{
+        display:inline-block;
+    }
+</style>
 <div class="card card-nav-tabs">
 	<div class="card-header" data-background-color="purple">
 		<div class="nav-tabs-navigation">
 			<div class="nav-tabs-wrapper">
+                
 				<span class="nav-tabs-title">Tasks:</span>
 				<ul class="nav nav-tabs" data-tabs="tabs">
 					<li class="active">
@@ -29,6 +35,8 @@
 						<div class="ripple-container"></div></a>
 					</li>
 				</ul>
+                
+                
 			</div>
 		</div>
 	</div>
