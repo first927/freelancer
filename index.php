@@ -134,7 +134,7 @@
         
         include "component/navbar.php"; 
         include "component/userprofileModal.inc.php" ;
-        include "component/jobInviteModal.inc.php";
+        //include "component/jobInviteModal.inc.php";
     ?>
     <div>
         <div class="col-md-2">

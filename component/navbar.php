@@ -188,7 +188,8 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                             </div>
                         </div>
 
-                        <!-- Modal AddJob-->
+<!--
+                         Modal AddJob
                         <div class="modal fade" id="modalAddJob" role="dialog" >
                             <div class="modal-dialog" style="width: 400px">
                                 <div class="modal-content" style="color: #1a237e">
@@ -216,6 +217,52 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                                                     <input required class="form-control" type="number" name="earning_1" id="earning_1">
                                                     <label for="earn"><span class="material-icons">add</span>Add More Skill </label>
                                                     <button type="button" id="add_form()" onclick="addForm()" class="btn btn-success"><i class="material-icons">plus_one</i></button>
+                                                </div>
+
+                                            </div>
+                                            <div align="center">
+                                                <button type="submit" class="btn btn-success" name="submitbtn" value="login">Submit</button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal" >CanCel</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+-->
+                        <!-- Modal AddJob-->
+                        <div class="modal fade" id="modalAddJob" role="dialog" >
+                            <div class="modal-dialog" style="width: 400px">
+                                <div class="modal-content" style="color: #1a237e">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title" align="center">Add Jobs</h3>
+                                    </div>
+                                    <div class="modal-body" style="padding:40px 50px;">
+                                        <form method="post">
+                                            <div class="form-group">
+                                                <label for="namejob"><span class="material-icons">store</span>Name Project</label>
+                                                <input required class="form-control" type="text" name="nameP" id="nameP" placeholder="Name Project">
+                                            </div>
+                                            <div>
+                                                <label for="detail"><span class="material-icons">assignment</span>Detail</label>
+                                                <textarea  rows="5" class="form-control" name="detail" placeholder="Detail your project" ></textarea>
+                                            </div>
+                                            <div id="job_earn" >
+                                                <div class="form-group col-md-4">
+                                                    <label for="skill"><span class="material-icons">local_library</span>Skill</label>
+                                                    <input required class="form-control" type="text" name="skill_1" id="skill_1">
+                                                </div>
+                                                <div class="form-group col-md-8">
+                                                    <div class="col-md-9">
+                                                        <label for="earn"><span class="material-icons">attach_money</span>Earning</label>
+                                                        <input required class="form-control" type="number" name="earning_1" id="earning_1">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button type="button" id="add_form()" onclick="addForm()" class="btn btn-success btn-just-icon"><i class="material-icons">plus_one</i></button>
+                                                    </div>
+                                                    
+                                                    
                                                 </div>
 
                                             </div>
