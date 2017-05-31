@@ -36,7 +36,7 @@ Non voluptate deserunt commodo ad magna dolor sit reprehenderit ex veniam anim n
 PRICE : 29000 thb.
 </textarea>
 <p><b> New agreement </b></p>
-<textarea class="form-control" rows="5" placeholder="Enter new agreement details">
+<textarea class="form-control" id="agreementArea" rows="5" placeholder="Enter new agreement details">
 </textarea>
 
 <input type="number" name="" style="width: 25%" class="form-control" id="input"  value="" min="{5"} max="" step="" required="required" title="" placeholder="* Enter price">
@@ -47,3 +47,9 @@ PRICE : 29000 thb.
 </div>
 </div>
 </div>
+
+<script src="assets/js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script>
+
+	
+</script>

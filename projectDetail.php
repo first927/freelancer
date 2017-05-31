@@ -97,64 +97,54 @@
     include "component/navbar.php";
     include "assets/model/connectService.inc.php";
     $pID = $_GET["proID"];
+
+    $obj = json_decode(getContent("job/getById/".$pID));
+    // echo $obj->Job->jname;
     ?>
     
     <div class="col-md-12" >
         <div class="card">
             <div class="card-header " data-background-color="purple">
-                <h2 class="title" >JOB NAME <?php echo $pID; ?></h2>
+                <h2 class="title" >JOB : <?php echo $obj->Job->jname; ?></h2>
             </div>
             <div class="card-content">
 
                 <h4 class="title" >Details</h4>
 
                 <p class="category">
-                    [รีวิว] ชีวิตฟรีดอม ก็ทำเงินได้ !<br>
-                    ----------------------------------------------------<br>
-                    รับฟัง และเปิดใจกับโลกของ “คนไร้บ้าน” ในงาน “Human of Street” วันเสาร์ที่ 3 มิถุนายน 2560 เวลา 14.30 - 17.30 น. ณ พิพิธบางลำพู 
-                    ติดตามข้อมูลเพิ่มเติม <br>
-                    การปฎิวัติวงการเกมมือถือ 2017, Lineage2 Revolution<br>
-                    กราฟิกคุณภาพสูงที่ควรคู่กับโอเพ่นฟิลด์ขนาดใหญ่<br>
-                    ลงทะเบียนล่วงหน้าตอนนี้เลย
-                    คลิปนี้ดีมาก<br>
-
-                    เหมาะอย่างยิ่งกับสถานการณ์ปัจจุบัน<br>
-
-                    .<br>
-
-                    ในยุคที่ผู้คนยืนอยู่บนความก้ำกึ่งระหว่าง "ผู้สร้าง" กับ "ผู้เสพย์"<br>
-
-                    ขณะที่บางคน 'เสพย์' มาแล้วพยายาม 'สร้าง' ต่อ<br>
-
-                    อีกหลายคน 'เสพย์' มาแล้ว 'ทำลาย'
-                    <br>
-                    .
-                    <br>
-                    ไม่ว่าคุณจะทำอะไร ... ยังไงก็มีคนด่า<br>
-
-                    ยิ่งคุณ 'เชื่อมั่น'<br>
-
-                    คุณยิ่งต้อง 'ช่างแม่ง'<br>
-
-                    .<br>
-                    <br>
-                    .<br>
-                    <br>
-                    - ผู้กองเบนซ์ -<br>
+                <?php echo $obj->Job->jdetail; ?>
                 </p>
+
                 <br>
-                <p class="category">Non voluptate deserunt commodo ad magna dolor sit reprehenderit ex veniam anim nisi pariatur dolore elit consequat. Aute in aliquip duis laboris do irure culpa eu fugiat nisi non ea magna amet duis. Veniam duis consequat commodo ex enim nostrud laborum exercitation magna ex. Proident duis cillum aliquip qui enim velit magna aliquip deserunt in et exercitation ut. Ullamco sit commodo ut consequat et in ex id cupidatat magna nisi. Aliqua et amet consequat eiusmod ut qui laboris adipisicing ullamco proident laborum laboris. Ut aliquip incididunt dolore ad elit eu minim id sed esse anim sit ad eu. Aliquip sit minim dolor officia proident sunt dolor elit do mollit consectetur aliqua officia. Culpa ea voluptate ex fugiat laborum commodo adipisicing id duis eu aliqua id nulla.
+
+                <h4 class="title" >Required skills</h4>
+                <p class="category">
+                <table class="table">
+    <thead>
+        <tr>
+            <th class='text-center'>#</th>
+            <th class='text-center'>Name</th>
+            <th class='text-center'>Skill Detail</th>
+        </tr>
+    </thead>
+    <tbody>
+                    <?php 
+
+                    $indexJobskills = 0;
+                    $max = count($obj->Job->jobskills); 
+                    while($indexJobskills < $max){
+                        echo "<td class='text-center'>".$obj->Job->jobskills[$indexJobskills]->idJobSkill."</td>";
+                        echo "<td class='text-center'>".$obj->Job->jobskills[$indexJobskills]->title."</td>";
+                        echo "<td class='text-center'>".$obj->Job->jobskills[$indexJobskills]->jskillDetail."</td>";
+
+                        $indexJobskills++;
+                    }
+
+                    ?>
+                    </tbody>
+                    </table>
+
                 </p>
-                <br>
-                <p class="category">Ut ad enim amet aliquip in reprehenderit est est ex. Fugiat sit proident fugiat enim ut occaecat dolor consectetur. Laborum dolore anim reprehenderit reprehenderit consequat ea labore excepteur incididunt. Sit aliquip tempor magna in nulla nulla incididunt officia excepteur do ullamco nisi amet commodo do. Nostrud dolor in sunt proident aliquip ullamco dolor ad dolor cupidatat laborum et deserunt. Duis ad deserunt commodo et duis cupidatat mollit aliqua incididunt reprehenderit sit occaecat enim aute sint reprehenderit minim amet. Occaecat officia consectetur qui voluptate eu nulla cupidatat occaecat anim occaecat reprehenderit cillum dolore consequat tempor. Dolor id laborum elit ut cupidatat ut ea sint do magna id esse dolore veniam sint. Deserunt sunt sunt elit sint cupidatat deserunt magna culpa in.
-                </p> 
-                <br>
-
-                <p class="category">Consectetur aute consectetur fugiat ad esse nulla mollit esse exercitation nostrud consequat cillum aliquip reprehenderit anim magna. Mollit adipisicing veniam ullamco duis cillum fugiat dolor et sunt et duis esse mollit voluptate consequat. Dolore qui cillum tempor in elit est incididunt in aute.</p>
-                <br>
-
-                <h4 class="title" >Requirements</h4>
-                <p class="category">Sit adipisicing excepteur aliquip velit sit velit ut laboris dolor sint sit. Lorem ipsum ea labore enim sit cupidatat consectetur culpa sint non tempor esse consequat officia ullamco labore irure. Est qui esse culpa dolor sit voluptate quis ut veniam excepteur cupidatat. Nulla laboris labore ad pariatur ullamco anim et laborum dolore incididunt mollit ullamco. Do dolore cillum in non id quis est sed voluptate adipisicing sint ullamco aute magna. Lorem ipsum magna pariatur qui mollit in anim ad pariatur anim ut enim ut eiusmod dolore in. Lorem ipsum sunt exercitation tempor ut minim dolore mollit qui id consequat eiusmod eiusmod adipisicing id. Enim nostrud excepteur elit dolor ea sit labore duis dolore consectetur ut ut. Lorem ipsum esse qui occaecat et ea sint tempor non aliquip ad quis adipisicing labore sunt consectetur. Ut commodo amet exercitation ullamco minim proident ut nostrud magna nostrud reprehenderit do ea tempor. Commodo dolor dolor aliqua elit irure quis dolor cupidatat. Lorem ipsum ad commodo in consectetur laboris fugiat est aute sint.</p>
                 <br>
 
                 <h4 class="category" style="float: right;"><b><i>- OOPS PRODUCTION.</i></b></h4>

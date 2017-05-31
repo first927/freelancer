@@ -5,20 +5,25 @@
 <div id="positions" class="collapse">
   <h4 class="title">Our positions 
     <div class="btn-group btn-group-sm">
-      <button type="button" class="btn btn-success selectAvailable">Available</button>
+     <!--  <button type="button" class="btn btn-success selectAvailable">Available</button>
       <button type="button" class="btn btn-dafault selectUnavailable">Unavailable</button>
-      <button type="button" class="btn btn-warning selectAll">All</button>
+      <button type="button" class="btn btn-warning selectAll">All</button> -->
     </div>
   </h4>
 
-  <button type="button" value="job1" class="btn btn-success active buttonAvailable">Front-End Programmer (Javascript, HTML, CSS)</button>
-  <button type="button" value="job2" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>
-  <button type="button" value="job3" class="btn btn-success active buttonAvailable">Front-End Programmer</button>
-  <button type="button" value="job4" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>
-  <button type="button" value="job5" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>
-  <button type="button" value="job6" class="btn btn-default disabled buttonUnavailable">Back-End Programmer</button>
-  <button type="button" value="job7" class="btn btn-success active buttonAvailable">Front-End Programmer (Javascript, HTML, CSS)</button>
-  <button type="button" value="job8" class="btn btn-default disabled buttonUnavailable">Back-End Programmer (PHP, blah blah blah)</button>    
+  <?php 
+  $indexPosition = 0; 
+  $maxPosition = count($obj->Job->positions);
+  if($maxPosition==0){
+    echo "<button type='button' class='btn btn-danger'>NO AVAILABLE POSITION</button>";
+  }
+  else{
+  while($indexPosition<$maxPosition){
+  ?>
+  <button type="button" value="<?php echo $obj->Job->positions[$indexPosition]->idPosition; ?>" class="btn btn-success active buttonAvailable"><?php echo $obj->Job->positions[$indexPosition]->pname; ?></button>   
+  <?php 
+  $indexPosition++;
+  };}; ?>
 </div>
 
 <div class="collapse" id="agreementCollapseInReg">
@@ -39,6 +44,12 @@
             $("#agreementCollapseInReg #addAgreementPosID").text($(this).attr("value"));
             $("#agreementCollapseInReg").collapse("show");
           });
+
+  $("#agreementCollapseInReg .btn-success").click(function (e) {
+    e.preventDefault();
+    alert($("#agreementCollapseInReg #agreementArea").val());
+  });
+
   $("#agreementCollapseInReg #addAgreementBtnCancel").click(function (e){
             $("#agreementCollapseInReg").collapse("hide");
   });
