@@ -249,21 +249,24 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                                                 <textarea  rows="5" class="form-control" name="detail" placeholder="Detail your project" ></textarea>
                                             </div>
                                             <div id="job_earn" >
-                                                <div class="form-group col-md-4">
+                                                <div>
+                                                    <div class="form-group col-md-4">
                                                     <label for="skill"><span class="material-icons">local_library</span>Skill</label>
                                                     <input required class="form-control" type="text" name="skill_1" id="skill_1">
-                                                </div>
-                                                <div class="form-group col-md-8">
-                                                    <div class="col-md-9">
-                                                        <label for="earn"><span class="material-icons">attach_money</span>Earning</label>
-                                                        <input required class="form-control" type="number" name="earning_1" id="earning_1">
                                                     </div>
-                                                    <div class="col-md-3">
-                                                        <button type="button" id="add_form()" onclick="addForm()" class="btn btn-success btn-just-icon"><i class="material-icons">plus_one</i></button>
+                                                    <div class="form-group col-md-8">
+                                                        <div class="col-md-9">
+                                                            <label for="earn"><span class="material-icons">attach_money</span>Earning</label>
+                                                            <input required class="form-control" type="number" name="earning_1" id="earning_1">
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button type="button" id="add_form()" onclick="addForm()" class="btn btn-success btn-just-icon"><i class="material-icons">plus_one</i></button>
+                                                        </div>
+
+
                                                     </div>
-                                                    
-                                                    
                                                 </div>
+                                                
 
                                             </div>
                                             <div align="center">
@@ -282,12 +285,12 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
         if (i<=100){
             i++;
             var div = document.createElement('div');
-            div.innerHTML = '<div class="form-group"><label for="skill"><span class="material-icons">local_library</span>Select Skill</label><input required class="form-control" type="text" name="skill_'+i+'""></div><div class="form-group"> <label for="earn"><span class="material-icons">attach_money</span>Earning</label><input required class="form-control" type="number" name="earning_'+i+'""></div><label for="earn"><span class="material-icons">add</span>Delete</label> <button type="button" id="remove_form()" onclick="removeForm(this)" class="btn btn-danger"><i class="material-icons">delete</i></button>';
+            div.innerHTML = '<div class="form-group col-md-4"><label for="skill"><span class="material-icons">local_library</span>Skill</label><input required class="form-control" type="text" name="skill_1" id="skill_1"></div><div class="form-group col-md-8"><div class="col-md-9"><label for="earn"><span class="material-icons">attach_money</span>Earning</label><input required class="form-control" type="number" name="earning_1" id="earning_1"></div><div class="col-md-3"><button type="button" id="add_form()" onclick="removeForm(this)" class="btn btn-danger btn-just-icon"><i class="material-icons">delete</i></button></div></div>';
             document.getElementById('job_earn').appendChild(div);
         }
     }
     function removeForm(div) {
-        document.getElementById('job_earn').removeChild(div.parentNode);
+        document.getElementById('job_earn').removeChild(div.parentNode.parentNode.parentNode);
     }
 
 </script>
