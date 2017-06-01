@@ -83,30 +83,20 @@
                             ?></td> 
 
                             <td style="text-align: center;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal" id="<?php echo $obj->Job->positions[$indexPositionManagement]->requests[$indexRegisPos]->idRequest; ?>" value="<?php echo $indexPositionManagement.$indexRegisPos; ?>" >View Details</button></td>
-                            <input type="hidden" value="<?php echo $obj->Job->positions[$indexPositionManagement]->requests[$indexRegisPos]->rdetail; ?>" id="<?php echo $indexPositionManagement.$indexRegisPos; ?>" class="form-control">
+                            
                             <td style="text-align: center;"><?php echo $getUser->Users->email; ?></td>
                             <td style="text-align: center;">
                                 <div class="btn-group btn-group-md">
                                     <button type="button" class="btn btn-success">Accept</button>
-                                    <button type="button" id="<?php echo $getUser->Users->name; ?>" value="<?php echo $obj->Job->positions[$indexPositionManagement]->pname; ?>" class="btn btn-warning btnReply">Reply</button>
+                                    <button type="button" id="<?php echo $getUser->Users->name; ?>" value="<?php echo $indexPositionManagement.$indexRegisPos; ?>" class="btn btn-warning btnReply">Reply</button>
                                     <button type="button" class="btn btn-danger">Decline</button>
+                                    <input type="hidden" value="<?php echo $obj->Job->positions[$indexPositionManagement]->requests[$indexRegisPos]->rdetail; ?>" id="<?php echo $indexPositionManagement.$indexRegisPos; ?>" class="form-control">
                                 </div>
                             </td>
                             </tr>
 
                             <?php $indexRegisPos++; }; ?>
-                        <!-- <tr>
-                            <td style="text-align: center;">Mary</td>
-                            <td style="text-align: center;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal" id="pos2">View Details</button></td>
-                            <td style="text-align: center;">mary@example.com</td>
-                            <td style="text-align: center;">
-                                <div class="btn-group btn-group-md">
-                                    <button type="button" class="btn btn-success">Accept</button>
-                                    <button type="button" id="user2" value="pos1" class="btn btn-warning btnReply">Reply</button>
-                                    <button type="button" class="btn btn-danger">Decline</button>
-                                </div>
-                            </td>
-                        </tr>-->
+                    
                     </tbody>
                 </table>
             </div>
@@ -114,45 +104,7 @@
             <?php 
             $indexPositionManagement++;
             }; ?>
-            <!-- <div class="tab-pane" id="Back-End">
-                // List คนสมัครในตำแหน่งนี้ //
-                <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th style="text-align: center;">Username</th>
-                        <th style="text-align: center;">RequestDetails</th>
-                        <th style="text-align: center;">Email</th>
-                        <th style="text-align: center;">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align: center;">John</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal" id="pos1">View Details</button></td>
-                    <td style="text-align: center;">john@example.com</td>
-                    <td style="text-align: center;">
-                        <div class="btn-group btn-group-md">
-                            <button type="button" class="btn btn-success">Accept</button>
-                            <button type="button" id="user1" value="pos2" class="btn btn-warning btnReply">Reply</button>
-                            <button type="button" class="btn btn-danger">Decline</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">OOP RANGER</td>
-                    <td style="text-align: center;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal" id="pos2">View Details</button></td>
-                    <td style="text-align: center;">OPERSOKDF@example.com</td>
-                    <td style="text-align: center;">
-                        <div class="btn-group btn-group-md">
-                            <button type="button" class="btn btn-success">Accept</button>
-                            <button type="button" id="user2" value="pos2" class="btn btn-warning btnReply">Reply</button>
-                            <button type="button" class="btn btn-danger">Decline</button>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div> -->
+            
 </div>
 </div>
 </div>
@@ -191,7 +143,7 @@
    $().ready(function(){
     $(".btn-info").click(function (e) {
         e.preventDefault();
-        $("#mDetail").text($(this).attr("id"));
+        $("#mDetail").text($("#"+$(this).val()).val());
         // $(this).hide();
 
     });
@@ -214,7 +166,7 @@
             $("#agreementCollapseInPosManage #addAgreementPosID").text($(this).attr("value"));
             $("#agreementCollapseInPosManage #addAgreementUserID").text($(this).attr("id"));
             
-            
+            // alert($(this).val());
             $("#agreementCollapseInPosManage #agreementDetail").text($("#"+$(this).val()).val());
             $("#agreementCollapseInPosManage").collapse("show");
         });
