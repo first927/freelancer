@@ -22,7 +22,6 @@
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <?php include "assets/model/connectService.inc.php"; ?>
 
-
     <style>
 
         body{
@@ -130,11 +129,15 @@
     </style>
 </head>
 <body>
-    <?php  
-        
+    
+    <?php
+        $addPath = "%7B%22idJob%22%20:%2010,%22jstatus%22%20:%200,%22jname%22%20:%20%22testName0%22,%22jdetail%22%20:%20%22testDetail0%22,%20%22jobskills%22%20:%20[%7B%20%22idJobSkill%22%20:%2010,%22title%22%20:%20%22testTitle0%22,%22jskillDetail%22%20:%20%22testSkillDetail0%22%7D,%7B%22idJobSkill%22%20:%2010,%22title%22%20:%20%22testTitle1%22,%22jskillDetail%22%20:%20%22testSkillDetail1%22%7D],%22positions%22%20:%20[]%7D";
+        function get(){
+            return 1;
+        }
+        $testjob = "A";
         include "component/navbar.php"; 
         include "component/userprofileModal.inc.php" ;
-        //include "component/jobInviteModal.inc.php";
     ?>
     <div>
         <div class="col-md-2">
@@ -148,7 +151,7 @@
     
     
 </body>
-
+    
 	<script>
 		function Redirect(id)
 		{
@@ -201,7 +204,43 @@
 
 <!--button-controller in userProfile-Modal-->
 <script src="assets/myJs/buttonController.js"></script>
+
+<script>
+    function addJob(){
+        var pName = $('[id="Pname"]').val();
+        alert(pName);
+        var pDetail = $('[name="Pdetail"]').val();
+        //alert("kif");
+        var pSkill = document.getElementsByName("skill_1");
+        var pEarn = document.getElementsByName("earning_1");
+        //alert("kif");
+        var url = getAddJobURL(pName,pDetail,pSkill,pEarn);
+        
+        $.get("assets/model/saveOrUpdate.ser.inc.php",{"url":url},function(result){
+            alert(result);
+        });
+        
+    }
     
+    function getAddJobURL(pName,pDetail,pSkill,pEarn){
+        var url = "%7B%22idJob%22%20:%2010,%22jstatus%22%20:%200,%22jname%22%20:%20%22"+pName+"%22,%22jdetail%22%20:%20%22"+pDetail+"%22,%20%22jobskills%22%20:%20[";
+        
+        for(var i = 0; i < pSkill.length ; i++){
+            url+="%7B%20%22idJobSkill%22%20:%20"+"10"+",%22title%22%20:%20%22"+pSkill.item(i).value+"%22,%22jskillDetail%22%20:%20%22"+"funking-detail!"+"%22%7D";
+            if(i < pSkill.length-1){
+                url+=",";
+            }
+        }
+        url+="],%22positions%22%20:%20[]%7D";
+        return url;
+    }
+    
+
+
+</script>
+    <?php
+
+    ?>
 
 <script>
     $(".pagination-button").click(function(){

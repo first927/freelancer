@@ -242,11 +242,11 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
                                         <form method="post">
                                             <div class="form-group">
                                                 <label for="namejob"><span class="material-icons">store</span>Name Project</label>
-                                                <input required class="form-control" type="text" name="nameP" id="nameP" placeholder="Name Project">
+                                                <input required class="form-control" type="text" name="Pname" id="Pname" placeholder="Name Project">
                                             </div>
                                             <div>
                                                 <label for="detail"><span class="material-icons">assignment</span>Detail</label>
-                                                <textarea  rows="5" class="form-control" name="detail" placeholder="Detail your project" ></textarea>
+                                                <textarea  rows="5" class="form-control" name="Pdetail" placeholder="Detail your project" ></textarea>
                                             </div>
                                             <div id="job_earn" >
                                                 <div>
@@ -270,7 +270,7 @@ if($_SERVER['REQUEST_URI'] == "/freelancer/index.php/" || $_SERVER['REQUEST_URI'
 
                                             </div>
                                             <div align="center">
-                                                <button type="submit" class="btn btn-success" name="submitbtn" value="login">Submit</button>
+                                                <button type="submit" class="btn btn-success" name="submitbtn" value="login" onclick='addJob()'>Submit</button>
                                                 <button type="button" class="btn btn-danger" data-dismiss="modal" >CanCel</button>
                                             </div>
                                         </form>

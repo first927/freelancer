@@ -5,9 +5,3 @@ function getContent($a){
 }
 
 ?>
-
-<!-- Example -->
-<!-- <script >
-    var x = <?php echo getContent("job/getAll");?>;
-    alert("this is name: "+x.Job[0].jobskills[0].title);
-</script> -->
