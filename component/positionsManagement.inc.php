@@ -69,20 +69,33 @@
                             </tr>
                         </thead>
                         <tbody>
-                          <tr><?php if($indexPositionManagement==0){ ?>
-                            <td style="text-align: center;">John1</td>
-                            <?php }else{ ?> <td style="text-align: center;">John2</td> <?php }; ?>
-                            <td style="text-align: center;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal" id="pos1" >View Details</button></td>
-                            <td style="text-align: center;">john@example.com</td>
+                          
+                            <?php 
+                            $maxRegisPos = count($obj->Job->positions[$indexPositionManagement]->requests);
+                            $indexRegisPos = 0;
+                            while($indexRegisPos<$maxRegisPos){ 
+                            ?>
+                            <tr>
+                            <td style="text-align: center;"><?php 
+                            $uID = $obj->Job->positions[$indexPositionManagement]->requests[$indexRegisPos]->idUsers; 
+                            $getUser = json_decode(getContent("users/getById/".$uID));
+                            echo $getUser->Users->name;
+                            ?></td> 
+
+                            <td style="text-align: center;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal" id="<?php echo $obj->Job->positions[$indexPositionManagement]->requests[$indexRegisPos]->idRequest; ?>" value="<?php echo $indexPositionManagement.$indexRegisPos; ?>" >View Details</button></td>
+                            <input type="hidden" value="<?php echo $obj->Job->positions[$indexPositionManagement]->requests[$indexRegisPos]->rdetail; ?>" id="<?php echo $indexPositionManagement.$indexRegisPos; ?>" class="form-control">
+                            <td style="text-align: center;"><?php echo $getUser->Users->email; ?></td>
                             <td style="text-align: center;">
                                 <div class="btn-group btn-group-md">
                                     <button type="button" class="btn btn-success">Accept</button>
-                                    <button type="button" id="user1" value="pos1" class="btn btn-warning btnReply">Reply</button>
+                                    <button type="button" id="<?php echo $getUser->Users->name; ?>" value="<?php echo $obj->Job->positions[$indexPositionManagement]->pname; ?>" class="btn btn-warning btnReply">Reply</button>
                                     <button type="button" class="btn btn-danger">Decline</button>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
+                            </tr>
+
+                            <?php $indexRegisPos++; }; ?>
+                        <!-- <tr>
                             <td style="text-align: center;">Mary</td>
                             <td style="text-align: center;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal" id="pos2">View Details</button></td>
                             <td style="text-align: center;">mary@example.com</td>
@@ -93,19 +106,7 @@
                                     <button type="button" class="btn btn-danger">Decline</button>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center;">July</td>
-                            <td style="text-align: center;"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal" id="pos3">View Details</button></td>
-                            <td style="text-align: center;">july@example.com</td>
-                            <td style="text-align: center;">
-                                <div class="btn-group btn-group-md">
-                                    <button type="button" class="btn btn-success">Accept</button>
-                                    <button type="button" id="user3" value="pos1" class="btn btn-warning btnReply">Reply</button>
-                                    <button type="button" class="btn btn-danger">Decline</button>
-                                </div>
-                            </td>
-                        </tr>
+                        </tr>-->
                     </tbody>
                 </table>
             </div>
@@ -113,7 +114,7 @@
             <?php 
             $indexPositionManagement++;
             }; ?>
-            <div class="tab-pane" id="Back-End">
+            <!-- <div class="tab-pane" id="Back-End">
                 // List คนสมัครในตำแหน่งนี้ //
                 <table class="table table-hover">
                     <thead>
@@ -151,7 +152,7 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
 </div>
 </div>
 </div>
@@ -206,9 +207,15 @@
             // confirm("Do you wanna register to "+$(this).attr("id")+" ?");
             // $("#agreementCollapse").collapse("hide");
             $("#agreementCollapseInPosManage #addAgreementJobID").text(<?php echo $pID; ?>);
-            // $("#addAgreementJobName").text();
+            // alert("dodoodo");
+            $("#agreementCollapseInPosManage #addAgreementJobName").text('<?php 
+                echo $obj->Job->jname;   
+             ?>');
             $("#agreementCollapseInPosManage #addAgreementPosID").text($(this).attr("value"));
             $("#agreementCollapseInPosManage #addAgreementUserID").text($(this).attr("id"));
+            
+            
+            $("#agreementCollapseInPosManage #agreementDetail").text($("#"+$(this).val()).val());
             $("#agreementCollapseInPosManage").collapse("show");
         });
 
