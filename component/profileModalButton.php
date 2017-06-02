@@ -1,7 +1,7 @@
 <button class="btn btn-warning btn-fab btn-fab-mini btn-round" id="profile-edit-btn" data-toggle="tooltip" data-placement="top" title="edit"  >
     <i class="material-icons edit-icon">build</i>
 </button>
-<button class="btn btn-success btn-fab btn-fab-mini btn-round" id="profile-save-btn" data-toggle="tooltip" data-placement="top" title="save"  >
+<button class="btn btn-success btn-fab btn-fab-mini btn-round" id="profile-save-btn" data-toggle="tooltip" data-placement="top" title="save" onclick="upDateUser()"  >
     <i class="material-icons edit-icon">save</i>
 </button>
 <button class="btn btn-info btn-fab btn-fab-mini btn-round" id="profile-port-btn" data-toggle="tooltip" data-placement="top" title="portfolio"  >

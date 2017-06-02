@@ -22,7 +22,7 @@ $(document).ready(function(){
         $("#profile-save-btn").css("display","inline-block");
         $("#profile-port-btn").css("display","none");
         $("#invite-btn").css("display","none");
-        $("#profile-detail input#username").focus();
+        $("#profile-detail #name").focus();
     });
     //save
     $("#profile-save-btn").click(function(){

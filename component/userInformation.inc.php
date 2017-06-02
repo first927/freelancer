@@ -1,5 +1,16 @@
 <h6 class="category text-gray">POSITION</h6>
-<h4 class="card-title" id="profiletitle">Name Surname</h4>
+<div class="col-md-6">
+    <div class="form-group label-floating">
+        <label class="control-label">Name</label>
+        <input type="username" id="name" class="form-control" value="example-username" disabled>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-group label-floating">
+        <label class="control-label">Surname</label>
+        <input type="text" id="surname" class="form-control" value="example-password" disabled>
+    </div>
+</div>
 <div class="col-md-6">
     <div class="form-group label-floating">
         <label class="control-label">Username</label>
@@ -9,7 +20,7 @@
 <div class="col-md-6">
     <div class="form-group label-floating">
         <label class="control-label">Password</label>
-        <input type="text" class="form-control" value="example-password" disabled>
+        <input type="text" id="password" class="form-control" value="example-password" disabled>
     </div>
 </div>
 <hr>
@@ -17,12 +28,12 @@
 <div class="col-md-6">
     <div class="form-group label-floating">
         <label class="control-label">E-mail</label>
-        <input type="text" class="form-control" value="first927@live.com" disabled>
+        <input type="text" id="email" class="form-control" value="first927@live.com" disabled>
     </div>
 </div>
 <div class="col-md-6">
     <div class="form-group label-floating">
         <label class="control-label">Tel-No.</label>
-        <input type="text" class="form-control" value="0948274583" disabled>
+        <input type="text" id="tel" class="form-control" value="0948274583" disabled>
     </div>
 </div>

@@ -235,12 +235,14 @@
         return url;
     }
     
+    function updateUser(){
+        
+        
+    }
+    
 
 
 </script>
-    <?php
-
-    ?>
 
 <script>
     $(".pagination-button").click(function(){
@@ -253,9 +255,34 @@
     });
 </script>
 <script>
-
+function upDateUser(){
+    var name = $("#profile-detail #name").val();
+    var surname = $("#profile-detail #surname").val();
+    var username = $("#profile-detail #username").val();
+    var password = $("#profile-detail #password").val();
+    var email = $("#profile-detail #email").val();
+    var tel = $("#profile-detail #tel").val();
+    var path = getUserUpdatePath(name,surname,username,password,email,tel);
+    $.get("assets/model/updateUser.ser.php",{"path":path},function(result){
+        alert(result);
+    });
+    
+}
+function getUserUpdatePath(name,surname,username,password,email,tel){
+    var url = "7B%20%22uid%22%20:%200,%20%22userName%22%20:%20%22"+username+"%22,%20%22name%22%20:%20%22"+name+"%22,%20%22surName%22%20:%20%22"+surname+"%22,%20%22userType%22%20:%200,%20%22password%22%20:%20"+password+",%20%22userType%22%20:%200,%20%22email%22%20:%20%22"+email+"%22,%20%22telephone%22%20:%20"+tel+",%20%22picture%22%20:%20%22test%22,%20%22documents%22%20:%20[%20%7B%20%22idPath%22%20:%200,%20%22name%22%20:%20%22test%22%20%7D,%20%7B%20%22idPath%22%20:%201,%20%22name%22%20:%20%22test%22%20%7D%20],%20%22requests%22%20:%20[%20%7B%20%22idRequest%22%20:%200,%20%22status2%22%20:%200,%20%22rdetail%22%20:%20%22test%22,%20%22recommends%22%20:%20[%20%7B%20%22idRecommend%22%20:%200,%20%22rdetail%22%20:%20%22test%22,%20%22rdetail%22%20:%20%22test%22,%20%22clientrequests%22%20:%20[%20%7B%20%22idClientRequest%22%20:%200%20%7D%20]%20%7D%20]%20%7D%20],%20%22clientrequestsForFromUser%22%20:%20[%20%7B%20%22idClientRequest%22%20:%200%20%7D%20],%20%22clientrequestsForToUser%22%20:%20[%20%7B%20%22idClientRequest%22%20:%200%20%7D%20],%20%22userskills%22%20:%20[%20%7B%20%22idUserSkill%22%20:%200,%20%22title%22%20:%20%22test%22,%20%22uskillDetail%22%20:%20%22test%22%20%7D%20],%20%7D";
+    return url;
+}
 function popupModal(id){
-    $("#profileModal  #profiletitle").text("User ");
+    var url = "assets/model/getUserById.ser.php";
+    $.get(url,{"id":id},function(result){
+        var user = result.Users;
+        $("#profile-detail #name").val(user.name);
+        $("#profile-detail #surname").val(user.surName);
+        $("#profile-detail #username").val(user.userName);
+        $("#profile-detail #password").val(user.password);
+        $("#profile-detail #email").val(user.email);
+        $("#profile-detail #tel").val(user.telephone);
+        },"json");
 }
 function showJob(id){
         //hide/show myjob content

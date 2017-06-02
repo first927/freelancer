@@ -7,7 +7,7 @@ $indexFl = 0;
 $maxFl = count($flList->Users);
 
     while($indexFl < $maxFl){ ?>
-    	<div class='col-md-3' onclick="popupModal(<?php echo $flList->Users[$indexFl]->uid; ?>)" data-toggle="modal" data-target="#profileModal">
+    	<div class='col-md-3' id="userlist" onclick="popupModal(<?php echo $flList->Users[$indexFl]->uid; ?>)" data-toggle="modal" data-target="#profileModal">
 				<div class='card show-box'>
 					<div class='card-header card-chart' data-background-color='orange'>
 						<div class='ct-chart' id='dailySalesChart'></div>
