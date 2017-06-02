@@ -1,4 +1,4 @@
-<h6 class="category text-gray">POSITION</h6>
+<h6 class="category text-gray">Personal detail</h6>
 <div class="col-md-6">
     <div class="form-group label-floating">
         <label class="control-label">Name</label>

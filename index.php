@@ -217,7 +217,7 @@
         var url = getAddJobURL(pName,pDetail,pSkill,pEarn);
         
         $.get("assets/model/saveOrUpdate.ser.inc.php",{"url":url},function(result){
-            alert(result);
+            alret("Add success");
         });
         
     }
